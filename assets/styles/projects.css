@@ -1,0 +1,85 @@
+.projects {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  padding: 10rem 15rem 4rem; 
+}
+
+.projects h2 {
+  margin-bottom: 5rem;
+}
+
+.projects__container {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.projects__card.card--reverse {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+
+.projects__card {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start; /* Align items to the top */
+  gap: 2rem;
+}
+
+.card__cover {
+  display: flex; /* Adjust as needed */
+  border-radius: 0.5rem;
+  object-fit: cover;
+  object-position: center;
+}
+
+.card__body {
+  display: flex; /* Allow the body to take up remaining space */
+  flex-direction: column;
+  padding: 1rem; /* Add some spacing */
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.card__description {
+  color: var(--title-color);
+}
+
+.card__list, .about__list {
+  margin-left: 1.25rem
+}
+
+.card__item, .about__item {
+  list-style: disc;
+}
+
+.card__buttons, .description__buttons {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.card__buttons .btn {
+  padding: .65rem 1.25rem;
+}
+
+.card__buttons .btn span {
+    font-size: 1rem;
+}
+
+.card__body .technologies__list {
+  gap: .75rem;
+}
+
+.card__body .technologies__item {
+  width: 4rem;
+  height: 4rem;
+}
+
+.card__body .technologies__logo {
+  height: 2rem;
+}

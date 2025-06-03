@@ -1,0 +1,62 @@
+main#home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+main#home .hero {
+  /* Your styles here */
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 6rem 2rem 0rem 2rem;
+}
+
+main#home .hero h1{
+  line-height: 2;
+  letter-spacing: 1rem;
+}
+
+main#home .hero h1 b {
+  line-height: 2;
+  letter-spacing: 1.5rem;
+  padding: 0;
+}
+
+main#home .hero span{
+  color: var(--secondary-fixed);
+  font-family: var(--ff-secondary);
+  font-size: 1.25rem;
+  font-weight: var(--fw-md);
+}
+
+main#home .hero span:hover{
+  color: var(--primary-container);
+  transition: color 0.3s ease;
+}
+
+main#home .hero p{
+  font-size: 1.25rem;
+  font-weight: var(--fw-md);
+  margin-bottom: 1.5rem;
+}
+
+.menu--social {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  justify-content: flex-start;
+  margin-bottom: 1rem;
+}
+
+.menu--social li {
+  justify-content: center;
+  align-items: center;
+  font-size: var(--fs-lg);
+}
+
+.menu--social li:hover {
+  color: var(--background-color-light);
+  cursor: pointer;
+}

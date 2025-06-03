@@ -1,0 +1,9 @@
+@media (min-width: 992px) {
+  .about__content1, .about__content2 {
+    display: grid;
+    grid-template-columns: 34% 60%;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 4rem;
+  }
+}
