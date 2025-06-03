@@ -3,6 +3,8 @@ main#home {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding: 6rem 2rem 0rem 2rem;
+  margin-bottom: 3rem;
 }
 
 main#home .hero {
@@ -10,17 +12,17 @@ main#home .hero {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
-  padding: 6rem 2rem 0rem 2rem;
 }
 
-main#home .hero h1{
+main#home .hero h1 {
   line-height: 2;
-  letter-spacing: 1rem;
+  letter-spacing: .3em;
+  padding: 0;
 }
 
 main#home .hero h1 b {
   line-height: 2;
-  letter-spacing: 1.5rem;
+  letter-spacing: .5em;
   padding: 0;
 }
 

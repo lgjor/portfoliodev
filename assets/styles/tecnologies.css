@@ -2,7 +2,7 @@ section.technologies {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin-top: 3rem;
+  margin-top: 0rem;
   align-items: center;
   gap: 1.25rem;
   padding: 6.25rem 1rem 2rem;
@@ -14,7 +14,7 @@ section.technologies h2 {
     text-align: left;
     font-family: var(--ff-secondary);
     font-weight: var(--fw-base);
-    font-size: var(--fs-2xl);
+    font-size: var(--fs-xl);
     max-width: 700px;
 }
 
