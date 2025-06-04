@@ -23,7 +23,7 @@
 }
 
 .btn span, .btn i {
-  font-size: 1.25rem;
+  font-size: var(--fs-md);
   text-transform: uppercase;
 }
 

@@ -187,6 +187,7 @@ p, span, li {
 p {
   font-family: var(--ff-secondary);
   text-align: justify;
+  line-height: 150%;
 }
 
 .menu__item {

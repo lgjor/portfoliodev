@@ -39,7 +39,7 @@ main#home .hero span:hover{
 }
 
 main#home .hero p{
-  font-size: 1.25rem;
+  font-size: var(--fs-md);
   font-weight: var(--fw-md);
   margin-bottom: 1.5rem;
 }
