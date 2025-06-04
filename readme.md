@@ -1,6 +1,6 @@
 # Portfólio Dev
 
-Este é um projeto de portfólio para desenvolvedores, criado com **HTML**, **CSS** e **JavaScript**. O objetivo é apresentar suas habilidades, projetos e informações de contato de forma moderna, responsiva e personalizável.
+Este é um projeto de portfólio para desenvolvedores, criado com **HTML**, **CSS** e **JavaScript**. O objetivo é apresentar habilidades, projetos e informações de contato de forma moderna e responsiva.
 
 ## Principais Features
 
@@ -13,7 +13,7 @@ Este é um projeto de portfólio para desenvolvedores, criado com **HTML**, **CS
 - **Seção Hero:**  
   Destaque para nome, título profissional e localização.
 
-- **Menu de Navegação Fixo:**  
+- **Menu de Navegação:**  
   Navegação rápida entre as seções do portfólio.
 
 - **Lista de Tecnologias:**  
