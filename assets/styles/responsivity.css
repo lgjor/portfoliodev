@@ -16,6 +16,11 @@
     margin: 0;
   }
 
+  p, span, li {
+    font-size: var(--fs-lg);
+    font-weight: var(--fw-base);
+  }
+
   header, .header {
     padding: 1rem 0.5rem;
     justify-content: center;
@@ -23,17 +28,25 @@
 
   .header__nav {
     flex-direction: row;
-    align-items: flex-start;
+    align-items: center;
     gap: 0.5rem;
+  }
+
+  header .header__nav {
+    width: 100%;
+    
   }
 
   #switch {
-    display: none;
+    margin-top: 3rem;
+    display: inline;
   }
 
   .menu--principal {
+    margin-top: 2rem;
     flex-direction: row;
-    gap: 0.5rem;
+    justify-content: center;
+    gap: 1rem;
     width: 100%;
   }
 
@@ -98,16 +111,16 @@
     flex-direction: row;
     flex-wrap: wrap;
     gap: 0.25rem;
+    height: 80px;
   }
 
-  .technologies__item {
-    width: 2.5rem;
-    height: 2.5rem;
-    padding: 0.5rem;
+  ul.technologies__list .technologies__item{
+    width: 4rem;
+    height: 4rem;
   }
 
   .technologies__logo {
-    height: 1.5rem;
+    height: 3rem;
   }
 
   .about {
@@ -125,11 +138,6 @@
   h3 {
     font-size: var(--fs-md);
     letter-spacing: var(--ls-md);
-  }
-
-  p, span, li {
-    font-size: var(--fs-base);
-    font-weight: var(--fw-base);
   }
 
   .card__buttons .btn span {
@@ -167,11 +175,6 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-  }
-
-  ul.technologies__list .technologies__item{
-    width: 2.5rem;
-    height: 2.5rem;
   }
 
   #projetos > a > button {
