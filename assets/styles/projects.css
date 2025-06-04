@@ -1,16 +1,18 @@
 .projects {
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 2rem;
   align-items: center;
-  padding: 10rem 15rem 4rem; 
+  padding: 5rem 5rem 4rem; 
 }
 
 .projects h2 {
-  margin-bottom: 5rem;
+  margin-bottom: 2rem;
 }
 
 .projects__container {
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 4rem;
@@ -22,6 +24,7 @@
   }
 
 .projects__card {
+  width: 100%;
   display: flex;
   flex-direction: row;
   align-items: flex-start; /* Align items to the top */
@@ -36,6 +39,7 @@
 }
 
 .card__body {
+  width: 100%;
   display: flex; /* Allow the body to take up remaining space */
   flex-direction: column;
   padding: 1rem; /* Add some spacing */

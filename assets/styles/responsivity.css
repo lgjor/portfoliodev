@@ -9,10 +9,10 @@
 } */
 
 /* Responsividade */
-@media (max-width: 576px) {
+@media (max-width: 768px) {
   .container {
     max-width: 100%;
-    padding: 0 0.5rem;
+    padding: 0 1rem .5rem;
     margin: 0;
   }
 
@@ -45,26 +45,27 @@
   }
 
   main#home {
-    padding: 2rem 2rem 0rem;
+    padding: 5rem 2rem 0rem;
   }
 
   main#home .hero h1{
-  font-size: var(--fs-sm);
-  letter-spacing: 0.2rem;
+  font-size: var(--fs-x);
+  letter-spacing: 0.4rem;
   word-break:keep-all;
   margin-top: 1rem;
   margin-bottom: 1rem;
   }
 
   main#home .hero h1 b {
-  letter-spacing: 0.3rem;
+  letter-spacing: 0.5rem;
   word-break:keep-all;
   }
 
   main#home .hero p{
   font-size: var(--fs-base);
+  letter-spacing: var(--ls-base);
   font-weight: var(--fw-md);
-  margin-bottom: 1.5rem;
+  margin-bottom: 3rem;
   }
 
   main#home a {
@@ -77,18 +78,19 @@
   flex-direction: row;
   gap: 1rem;
   justify-content: center;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
   }
 
   section.technologies {
     flex-direction: column;
     align-items: center;
-    padding: 2rem 0.5rem 1rem 0.5rem;
+    padding: 4rem 0.5rem 4rem 0.5rem;
     margin-top: 1rem;
   }
 
   section.technologies h2 {
-    font-size: var(--fs-md);
+    font-size: var(--fs-lg);
+    letter-spacing: var(--ls-lg);
     text-align: center;
   }
 
@@ -116,8 +118,24 @@
   h2{
     display: block;
     text-align: center;
-    font-size: var(--fs-md);
+    font-size: var(--fs-lg);
     margin: 0 auto;
+  }
+
+  h3 {
+    font-size: var(--fs-md);
+    letter-spacing: var(--ls-md);
+  }
+
+  p, span, li {
+    font-size: var(--fs-base);
+    font-weight: var(--fw-base);
+  }
+
+  .card__buttons .btn span {
+    font-size: var(--fs-base);
+    letter-spacing: var(--ls-base);
+    font-weight: var(--fw-md);
   }
 
   .projects {
@@ -131,6 +149,9 @@
   .projects__card, .projects__card.card--reverse {
     flex-direction: column;
     gap: 0;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto; 
   }
 
   .card__cover {
@@ -153,8 +174,9 @@
     height: 2.5rem;
   }
 
-  .btn span, .btn i {
-    font-size: var(--fs-sm);
+  #projetos > a > button {
+    font-size: var(--fs-md);
+    letter-spacing: var(--ls-md);
     text-transform: uppercase;
   }
 
@@ -168,11 +190,23 @@
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 576px) {
   .container {
+    width: 100%;
     max-width: 100%;
     padding: 0 0.5rem;
     margin: 0;
+  }
+
+  p, span, li {
+    font-size: var(--fs-base);
+    font-weight: var(--fw-base);
+    letter-spacing: var(--ls-base);
+  }
+
+  h3 {
+    font-size: var(--fs-md);
+    letter-spacing: var(--ls-md);
   }
 
   header, .header {
@@ -204,7 +238,11 @@
   }
 
   main#home {
-    padding: 2rem 2rem 0rem;
+    padding: 2rem 1rem 0rem;
+  }
+
+  main#home .hero span {
+    font-size: var(--fs-sm);
   }
 
   main#home .hero h1{
@@ -222,6 +260,7 @@
 
   main#home .hero p{
   font-size: var(--fs-base);
+  letter-spacing: var(--ls-base);
   font-weight: var(--fw-md);
   margin-bottom: 1.5rem;
   }
@@ -242,12 +281,14 @@
   section.technologies {
     flex-direction: column;
     align-items: center;
-    padding: 2rem 0.5rem 1rem 0.5rem;
+    padding: 2rem 0.5rem 2rem 0.5rem;
     margin-top: 1rem;
+    width: 100%;
   }
 
   section.technologies h2 {
     font-size: var(--fs-md);
+    letter-spacing: var(--ls-md);
     text-align: center;
   }
 
@@ -270,26 +311,46 @@
   .about {
     width: 100%;
     max-width: 100%;
+    padding: 3rem 0;
+  }
+
+  .about__photo {
+    display: flex;
+    align-self: center;
+    width: 50%;
   }
 
   h2{
     display: block;
     text-align: center;
     font-size: var(--fs-md);
+    letter-spacing: var(--ls-md);
     margin: 0 auto;
   }
 
   .projects {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
     align-items: center;
-    padding: 5rem 0rem 0rem; 
+    padding: 3rem 0rem 0rem 0rem; 
+  }
+
+  .projects__container{
+    gap: 3rem;
+  }
+
+  .projects h2 {
+    margin-bottom: 0px;
   }
 
   .projects__card, .projects__card.card--reverse {
     flex-direction: column;
     gap: 0;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    justify-content: center;
+    width: 100%;
   }
 
   .card__cover {
@@ -298,6 +359,7 @@
   width: 100%;
   object-fit: cover;
   object-position: center;
+  justify-content: center;
   }
 
   ul.technologies__list {
@@ -314,6 +376,7 @@
 
   .btn span, .btn i {
     font-size: var(--fs-sm);
+    letter-spacing: var(--ls-sm);
     text-transform: uppercase;
   }
 
@@ -322,6 +385,17 @@
     text-justify: inter-word;
     word-break: keep-all;
     line-height: 135%;    
+  }
+
+  #sobre > div.about__content1 > div > p {
+    padding: 0 2rem;
+  }
+
+  a.menu__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
   }
 
 }

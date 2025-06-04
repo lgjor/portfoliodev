@@ -17,6 +17,14 @@
   --fs-x: 2rem;
   --fs-xl: 3rem;
 
+  /* Letter-spacing */
+  --ls-sm: 0.03em;
+  --ls-base: 0.06em;
+  --ls-md: 0.1em;
+  --ls-lg: 0.01em;
+  --ls-x: 0.005em;
+  --ls-xl: 0em;
+
   --px-lg: 1.5rem;
   --py-base: 1rem;
   --py-lg: 1.5rem;
@@ -101,8 +109,11 @@
   }
 }
 
-html{
-  width: 100%;
+html, body {
+  width: 100vw;
+  min-width: 100vw;
+  max-width: 100vw;
+  overflow-x: hidden;
 }
 
 body:before {
@@ -115,7 +126,7 @@ body:before {
   top: 0;
   left: 0;
   position: absolute;
-  width: 100%;
+  width: 100vw;
   height: 100%;
   z-index: -1;
 }
@@ -150,26 +161,29 @@ b {
 
 h1 {
   font-size: var(--fs-xl);
-  font-weight: var(--fs-base);
+  font-weight: var(--fw-base);
   letter-spacing: 1.5em;
 }
 
 h2 {
   font-size: var(--fs-xl);
-  font-weight: var(--fs-base);
+  font-weight: var(--fw-bold);
   text-align: center;
-  letter-spacing: 1rem;
+  letter-spacing: var(--ls-xl);
 }
 
 h3 {
   font-size: var(--fs-lg);
+  font-weight: var(--fw-md);
+  letter-spacing: var(--ls-lg);
   text-align: left;
 }
 
 h4 {
   color: var(--primary-color);
-  font-weight: var(--fw-md);
+  font-weight: var(--fw-base);
   font-size: var(--fs-md);
+  letter-spacing: var(--ls-md);
   text-align: left;
 }
 
@@ -181,6 +195,7 @@ h1, h2, h3 {
 
 p, span, li {
   font-size: var(--fs-base);
+  letter-spacing: var(--ls-base);
   font-weight: var(--fw-base);
 }
 
