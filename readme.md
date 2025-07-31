@@ -1,5 +1,11 @@
 # Portfolio - Lucas de Godoy Chicarelli
 
+<p align="center">
+  <a href="https://lgjor.github.io/portfoliodev/" target="_blank">
+    <img src=".github/preview.jpg" width="100%" alt="Portfolio Dev">
+  </a>
+</p>
+
 Portfolio pessoal desenvolvido com HTML, CSS e JavaScript, com sistema de administração para gerenciamento de conteúdo.
 
 ## 🚀 Funcionalidades
