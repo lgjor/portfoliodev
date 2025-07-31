@@ -263,8 +263,14 @@ class PortfolioAdmin {
             }));
         }
 
+        console.log('🔄 Adicionando projeto:', project.title);
+        console.log('📊 Total de projetos antes:', this.portfolioData.projects.length);
+
         // Adicionar projeto temporariamente (não salvar ainda)
         this.portfolioData.projects.push(project);
+        
+        console.log('📊 Total de projetos depois:', this.portfolioData.projects.length);
+        
         this.renderProjects();
         
         // Mostrar seção de salvar
@@ -273,6 +279,8 @@ class PortfolioAdmin {
         // Limpar formulário
         document.getElementById('projectForm').reset();
         document.getElementById('carouselFields').style.display = 'none';
+        
+        console.log('✅ Projeto adicionado com sucesso');
     }
 
     removeProject(index) {
@@ -295,6 +303,10 @@ class PortfolioAdmin {
     }
 
     saveProjects() {
+        console.log('🔄 Salvando projetos...');
+        console.log('📊 Total de projetos antes de salvar:', this.portfolioData.projects.length);
+        console.log('📋 Projetos:', this.portfolioData.projects.map(p => p.title));
+        
         // Salvar dados no localStorage
         this.savePortfolioData();
         
@@ -306,6 +318,8 @@ class PortfolioAdmin {
         
         // Atualizar automaticamente o arquivo JSON
         this.updatePortfolioJSON();
+        
+        console.log('✅ Projetos salvos com sucesso');
     }
 
     updatePortfolioJSON() {
@@ -482,12 +496,17 @@ class PortfolioAdmin {
             document.getElementById('carouselImages').value = project.images.map(img => img.src).join('\n');
         }
 
-        // Remover projeto atual (não salvar ainda)
+        // Remover projeto atual da lista (será adicionado de volta quando salvar)
         this.portfolioData.projects.splice(index, 1);
         this.renderProjects();
         
         // Mostrar seção de salvar
         this.showProjectSaveSection();
+        
+        // Limpar campos do carrossel se não for carrossel
+        if (project.type !== 'carousel') {
+            document.getElementById('carouselFields').style.display = 'none';
+        }
     }
 
     saveEducation() {

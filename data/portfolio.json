@@ -42,15 +42,23 @@
     {
       "id": "simple-task-board",
       "title": "Simple Task Board Manager",
-      "description": "Aplicação desktop JavaFX simples e eficiente para gerenciamento de tarefas.",
+      "description": "Aplicação desktop simples e eficiente para gerenciamento de tarefas.",
       "image": "assets/images/projects/01-boarddetarefas.jpg",
-      "alt": "Capa Simple Task Board Manager",
+      "alt": "Simple Task Board Manager",
       "technologies": [
         "JAVA"
       ],
-      "repository": "https://github.com/lgjor/simple-task-board-manager?tab=readme-ov-file#simple-task-board-manager",
+      "repository": "https://github.com/lgjor/simple-task-board-manager",
       "preview": "",
-      "features": [],
+      "features": [
+        "⚡ Economia de Tempo: Menos tempo configurando, mais tempo produzindo",
+        "🧠 Foco na Tarefa: Interface limpa que não distrai do objetivo principal",
+        "💾 Persistência Local: Seus dados ficam seguros no seu computador",
+        "📋 Boards Visuais: Organize o progresso das tarefas em colunas",
+        "🎴 Cards Interativos: Crie e edite cards com duplo clique (edição in-place)",
+        "🔄 Drag & Drop: Mova tarefas entre colunas com arrastar e soltar",
+        "📊 Progresso Visual: Acompanhe o progresso com percentuais automáticos"
+      ],
       "hasModal": false,
       "isReverse": false,
       "type": "simple"
@@ -203,6 +211,37 @@
         "Modifique o bônus de iniciativa a qualquer momento.",
         "Interface temática inspirada em D&D.",
         "Player de música de combate integrado."
+      ],
+      "hasModal": false,
+      "isReverse": false,
+      "type": "simple"
+    },
+    {
+      "id": "portfoliodev",
+      "title": "Porfolio Dev",
+      "description": "Portfolio pessoal desenvolvido com HTML, CSS e JavaScript, com sistema de administração para gerenciamento de conteúdo.",
+      "image": ".github/preview.png",
+      "alt": "Porfolio Dev",
+      "technologies": [
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ],
+      "repository": "https://github.com/lgjor/portfoliodev",
+      "preview": "https://lgjor.github.io/portfoliodev/",
+      "features": [
+        "✅ Front end responsivo e moderno",
+        "✅ Tema claro/escuro",
+        "✅ Seções: Tecnologias, Projetos, Sobre",
+        "✅ Preview de imagens e modal de carrossel",
+        "✅ Sistema de Administração web",
+        "✅ Formulários para dados pessoais, projetos, tecnologias",
+        "✅ Suporte a carrossel de imagens",
+        "✅ Exportação de JSON",
+        "✅ Preview em tempo real",
+        "✅ Armazenamento local",
+        "✅ Reordenação de projetos (setas ↑↓ e drag & drop)",
+        "✅ Preview inteligente (imagem principal quando não há prévia)"
       ],
       "hasModal": false,
       "isReverse": false,
