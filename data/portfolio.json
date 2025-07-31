@@ -54,7 +54,7 @@
         "⚡ Economia de Tempo: Menos tempo configurando, mais tempo produzindo",
         "🧠 Foco na Tarefa: Interface limpa que não distrai do objetivo principal",
         "💾 Persistência Local: Seus dados ficam seguros no seu computador",
-        "📋 Boards Visuais: Organize o progresso das tarefas em colunas",
+        "📋 Boards Visuais: Organize suas tarefas em colunas visuais (A Fazer, Em Andamento, Concluído)",
         "🎴 Cards Interativos: Crie e edite cards com duplo clique (edição in-place)",
         "🔄 Drag & Drop: Mova tarefas entre colunas com arrastar e soltar",
         "📊 Progresso Visual: Acompanhe o progresso com percentuais automáticos"
@@ -220,7 +220,7 @@
       "id": "portfoliodev",
       "title": "Porfolio Dev",
       "description": "Portfolio pessoal desenvolvido com HTML, CSS e JavaScript, com sistema de administração para gerenciamento de conteúdo.",
-      "image": ".github/preview.png",
+      "image": "assets\\images\\projects\\07-portfolio-dev\\preview.png",
       "alt": "Porfolio Dev",
       "technologies": [
         "HTML",
