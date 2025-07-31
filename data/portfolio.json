@@ -220,7 +220,7 @@
       "id": "portfoliodev",
       "title": "Porfolio Dev",
       "description": "Portfolio pessoal desenvolvido com HTML, CSS e JavaScript, com sistema de administração para gerenciamento de conteúdo.",
-      "image": "assets\\images\\projects\\07-portfolio-dev\\preview.png",
+      "image": "assets/images/projects/07-portfolio-dev/preview.png",
       "alt": "Porfolio Dev",
       "technologies": [
         "HTML",
