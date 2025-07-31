@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debug Simples</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        .test { margin: 20px 0; padding: 10px; border: 1px solid #ccc; }
+        .success { background: #d4edda; }
+        .error { background: #f8d7da; }
+    </style>
+</head>
+<body>
+    <h1>Debug Simples - Sistema Dinâmico</h1>
+    
+    <div class="test">
+        <h3>Teste 1: Carregar JSON</h3>
+        <button onclick="testJSON()">Testar JSON</button>
+        <div id="jsonResult"></div>
+    </div>
+    
+    <div class="test">
+        <h3>Teste 2: Atualizar Elementos</h3>
+        <div id="testElement">Texto Original</div>
+        <button onclick="updateElement()">Atualizar Elemento</button>
+    </div>
+    
+    <div class="test">
+        <h3>Teste 3: Data Loader</h3>
+        <button onclick="testDataLoader()">Testar Data Loader</button>
+        <div id="loaderResult"></div>
+    </div>
+
+    <script>
+        function testJSON() {
+            const result = document.getElementById('jsonResult');
+            result.innerHTML = 'Carregando...';
+            
+            fetch('data/portfolio.json')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    result.innerHTML = `
+                        <div class="success">
+                            ✅ JSON carregado com sucesso!<br>
+                            Nome: ${data.personal?.name || 'N/A'}<br>
+                            Título: ${data.personal?.title || 'N/A'}<br>
+                            Tecnologias: ${data.technologies?.length || 0}<br>
+                            Projetos: ${data.projects?.length || 0}
+                        </div>
+                    `;
+                })
+                .catch(error => {
+                    result.innerHTML = `
+                        <div class="error">
+                            ❌ Erro: ${error.message}
+                        </div>
+                    `;
+                });
+        }
+
+        function updateElement() {
+            const element = document.getElementById('testElement');
+            element.textContent = 'Texto Atualizado - ' + new Date().toLocaleTimeString();
+        }
+
+        function testDataLoader() {
+            const result = document.getElementById('loaderResult');
+            result.innerHTML = 'Testando...';
+            
+            // Simular o data loader
+            fetch('data/portfolio.json')
+                .then(response => response.json())
+                .then(data => {
+                    // Simular atualização de elementos
+                    const testElement = document.getElementById('testElement');
+                    if (testElement) {
+                        testElement.textContent = `Atualizado por Data Loader: ${data.personal?.name || 'N/A'}`;
+                        result.innerHTML = `
+                            <div class="success">
+                                ✅ Data Loader funcionando!<br>
+                                Elemento atualizado com sucesso.
+                            </div>
+                        `;
+                    } else {
+                        result.innerHTML = `
+                            <div class="error">
+                                ❌ Elemento não encontrado
+                            </div>
+                        `;
+                    }
+                })
+                .catch(error => {
+                    result.innerHTML = `
+                        <div class="error">
+                            ❌ Erro no Data Loader: ${error.message}
+                        </div>
+                    `;
+                });
+        }
+    </script>
+</body>
+</html> 

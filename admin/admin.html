@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Portfolio</title>
+    <link rel="stylesheet" href="admin.css">
+    <!-- Bootstrap icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+</head>
+<body>
+    <div class="admin-container">
+        <header class="admin-header">
+            <h1><i class="bi bi-gear-fill"></i> Gerenciador de Portfolio</h1>
+            <div class="admin-actions">
+                <button id="exportBtn" class="btn btn--primary">
+                    <i class="bi bi-download"></i> Exportar JSON
+                </button>
+                <button id="previewBtn" class="btn btn--secondary">
+                    <i class="bi bi-eye"></i> Visualizar
+                </button>
+            </div>
+        </header>
+
+        <!-- Notificação de instruções -->
+        <div class="admin-instructions">
+            <div class="instruction-content">
+                <i class="bi bi-info-circle"></i>
+                <div>
+                    <strong>Como usar o sistema:</strong>
+                    <p>1. Edite os dados nas seções abaixo</p>
+                    <p>2. Para projetos: Clique em "Salvar Projetos" após editar</p>
+                    <p>3. <strong>Reordenar projetos:</strong> Use as setas ↑↓ ou arraste e solte</p>
+                    <p>4. Substitua o arquivo data/portfolio.json pelo arquivo baixado</p>
+                    <p>5. Recarregue o site para ver as mudanças</p>
+                </div>
+                <button class="instruction-close" onclick="this.parentElement.parentElement.remove()">
+                    <i class="bi bi-x"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="admin-content">
+            <!-- Dados Pessoais -->
+            <section class="admin-section">
+                <h2><i class="bi bi-person"></i> Dados Pessoais</h2>
+                <form id="personalForm" class="admin-form">
+                    <div class="form-group">
+                        <label for="name">Nome Completo</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="title">Título Profissional</label>
+                            <input type="text" id="title" name="title" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subtitle">Subtítulo</label>
+                            <input type="text" id="subtitle" name="subtitle">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="location">Localização</label>
+                        <input type="text" id="location" name="location" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="description">Descrição</label>
+                        <textarea id="description" name="description" rows="4" required></textarea>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="english">Inglês</label>
+                            <select id="english" name="english">
+                                <option value="Básico">Básico</option>
+                                <option value="Intermediário">Intermediário</option>
+                                <option value="Avançado">Avançado</option>
+                                <option value="Fluente">Fluente</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="spanish">Espanhol</label>
+                            <select id="spanish" name="spanish">
+                                <option value="Básico">Básico</option>
+                                <option value="Intermediário">Intermediário</option>
+                                <option value="Avançado">Avançado</option>
+                                <option value="Fluente">Fluente</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="github">GitHub</label>
+                            <input type="url" id="github" name="github">
+                        </div>
+                        <div class="form-group">
+                            <label for="linkedin">LinkedIn</label>
+                            <input type="url" id="linkedin" name="linkedin">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="instagram">Instagram</label>
+                        <input type="url" id="instagram" name="instagram">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="resume">Link do Currículo</label>
+                        <input type="url" id="resume" name="resume">
+                    </div>
+
+                    <button type="submit" class="btn btn--primary">
+                        <i class="bi bi-check"></i> Salvar Dados Pessoais
+                    </button>
+                </form>
+            </section>
+
+            <!-- Tecnologias -->
+            <section class="admin-section">
+                <h2><i class="bi bi-code-slash"></i> Tecnologias</h2>
+                <div class="technologies-manager">
+                    <div class="current-technologies">
+                        <h3>Tecnologias Atuais</h3>
+                        <div id="technologiesList" class="technologies-grid">
+                            <!-- Tecnologias serão carregadas aqui -->
+                        </div>
+                    </div>
+                    
+                    <form id="technologyForm" class="admin-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="techName">Nome da Tecnologia</label>
+                                <input type="text" id="techName" name="techName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="techIcon">Ícone (caminho)</label>
+                                <input type="text" id="techIcon" name="techIcon" required>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn--secondary">
+                            <i class="bi bi-plus"></i> Adicionar Tecnologia
+                        </button>
+                    </form>
+                </div>
+            </section>
+
+            <!-- Projetos -->
+            <section class="admin-section">
+                <h2><i class="bi bi-folder"></i> Projetos</h2>
+                
+                <form id="projectForm" class="admin-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="projectTitle">Título do Projeto</label>
+                            <input type="text" id="projectTitle" name="projectTitle" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="projectId">ID do Projeto</label>
+                            <input type="text" id="projectId" name="projectId" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="projectDescription">Descrição</label>
+                        <textarea id="projectDescription" name="projectDescription" rows="3" required></textarea>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="projectImage">Imagem Principal</label>
+                            <input type="text" id="projectImage" name="projectImage" placeholder="assets/images/projects/...">
+                        </div>
+                        <div class="form-group">
+                            <label for="projectAlt">Alt da Imagem</label>
+                            <input type="text" id="projectAlt" name="projectAlt">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="projectRepository">Repositório</label>
+                            <input type="url" id="projectRepository" name="projectRepository">
+                        </div>
+                        <div class="form-group">
+                            <label for="projectPreview">Preview (URL)</label>
+                            <input type="url" id="projectPreview" name="projectPreview">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="projectTechnologies">Tecnologias (separadas por vírgula)</label>
+                        <input type="text" id="projectTechnologies" name="projectTechnologies" placeholder="HTML, CSS, JavaScript">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="projectFeatures">Funcionalidades (uma por linha)</label>
+                        <textarea id="projectFeatures" name="projectFeatures" rows="4" placeholder="📋 Boards Visuais: Organize suas tarefas...&#10;🎴 Cards Interativos: Crie e edite cards..."></textarea>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>
+                                <input type="checkbox" id="projectHasModal" name="projectHasModal">
+                                Tem Modal de Prévia
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <label>
+                                <input type="checkbox" id="projectIsReverse" name="projectIsReverse">
+                                Layout Reverso
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <label>
+                                <input type="checkbox" id="projectIsCarousel" name="projectIsCarousel">
+                                É Carrossel
+                            </label>
+                        </div>
+                    </div>
+
+                    <div id="carouselFields" class="carousel-fields" style="display: none;">
+                        <h3>Configuração do Carrossel</h3>
+                        <div class="form-group">
+                            <label for="carouselId">ID do Carrossel</label>
+                            <input type="text" id="carouselId" name="carouselId" placeholder="nome-do-projeto">
+                        </div>
+                        <div class="form-group">
+                            <label for="carouselImages">Imagens do Carrossel (uma por linha)</label>
+                            <textarea id="carouselImages" name="carouselImages" rows="4" placeholder="assets/images/projects/projeto/img1.png&#10;assets/images/projects/projeto/img2.png"></textarea>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn--primary">
+                        <i class="bi bi-plus"></i> Adicionar Projeto
+                    </button>
+                </form>
+
+                <!-- Botão de Salvar Projetos -->
+                <div id="projectSaveSection" class="project-save-section" style="display: none;">
+                    <div class="save-notification">
+                        <i class="bi bi-info-circle"></i>
+                        <span>Projeto adicionado/editado. Clique em "Salvar Projetos" para confirmar as alterações.</span>
+                    </div>
+                    <button id="saveProjectsBtn" class="btn btn--success">
+                        <i class="bi bi-check-circle"></i> Salvar Projetos
+                    </button>
+                </div>
+
+                <div class="projects-list">
+                    <h3>Projetos Existentes</h3>
+                    <div id="projectsList">
+                        <!-- Lista de projetos será carregada aqui -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Formação -->
+            <section class="admin-section">
+                <h2><i class="bi bi-mortarboard"></i> Formação</h2>
+                <form id="educationForm" class="admin-form">
+                    <div class="form-group">
+                        <label for="degree">Formação</label>
+                        <input type="text" id="degree" name="degree" required>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="institution">Instituição</label>
+                            <input type="text" id="institution" name="institution" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="graduationDate">Data de Conclusão</label>
+                            <input type="text" id="graduationDate" name="graduationDate" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="educationType">Tipo de Formação</label>
+                        <input type="text" id="educationType" name="educationType" required>
+                    </div>
+
+                    <button type="submit" class="btn btn--primary">
+                        <i class="bi bi-check"></i> Salvar Formação
+                    </button>
+                </form>
+            </section>
+
+            <!-- Experiência -->
+            <section class="admin-section">
+                <h2><i class="bi bi-briefcase"></i> Experiência</h2>
+                <form id="experienceForm" class="admin-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="expTitle">Cargo</label>
+                            <input type="text" id="expTitle" name="expTitle" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="expPeriod">Período</label>
+                            <input type="text" id="expPeriod" name="expPeriod" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="expDescription">Descrição</label>
+                            <textarea id="expDescription" name="expDescription" rows="3" required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="expActivities">Atividades (uma por linha)</label>
+                        <textarea id="expActivities" name="expActivities" rows="4" placeholder="Elaboração de temas;&#10;Produção de conteúdo;&#10;Mídias sociais;"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn--primary">
+                        <i class="bi bi-check"></i> Salvar Experiência
+                    </button>
+                </form>
+            </section>
+
+            <!-- Cursos -->
+            <section class="admin-section">
+                <h2><i class="bi bi-book"></i> Cursos</h2>
+                
+                <form id="courseForm" class="admin-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="courseTitle">Título do Curso</label>
+                            <input type="text" id="courseTitle" name="courseTitle" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="courseInstitution">Instituição</label>
+                            <input type="text" id="courseInstitution" name="courseInstitution" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="courseDate">Data</label>
+                        <input type="text" id="courseDate" name="courseDate" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="courseDescription">Descrição</label>
+                        <textarea id="courseDescription" name="courseDescription" rows="6" required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn--secondary">
+                        <i class="bi bi-plus"></i> Adicionar Curso
+                    </button>
+                </form>
+
+                <div class="courses-list">
+                    <h3>Cursos Existentes</h3>
+                    <div id="coursesList">
+                        <!-- Lista de cursos será carregada aqui -->
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script src="admin.js"></script>
+    <script src="init-admin.js"></script>
+</body>
+</html>

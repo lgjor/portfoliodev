@@ -1,0 +1,256 @@
+{
+  "personal": {
+    "name": "Lucas de Godoy Chicarelli",
+    "title": "Desenvolvedor Júnior",
+    "subtitle": "focado em resultados de qualidade",
+    "location": "Santo Amaro da Imperatriz-SC",
+    "description": "Olá, sou mestre em comunicação e apaixonado por tecnologia. Atualmente estou estudando java, C e Javascript com foco em desenvolvimento BackEnd. Tenho experiência com o desenvolvimento de websites e temas Wordpress.",
+    "languages": {
+      "english": "Avançado",
+      "spanish": "Básico"
+    },
+    "social": {
+      "github": "https://github.com/lgjor",
+      "linkedin": "https://www.linkedin.com/in/lucasgch/",
+      "instagram": ""
+    },
+    "resume": "https://drive.google.com/file/d/1V2P8Y6aiFhk5syCKhfmiTu2Rn9xdYkFd/view?usp=sharing"
+  },
+  "technologies": [
+    {
+      "name": "Java",
+      "icon": "assets/icons/java-brands.svg",
+      "alt": "Java logo"
+    },
+    {
+      "name": "JavaScript",
+      "icon": "assets/icons/JavaScript.svg",
+      "alt": "JavaScript logo"
+    },
+    {
+      "name": "HTML",
+      "icon": "assets/icons/html5-brands.svg",
+      "alt": "HTML 5 logo"
+    },
+    {
+      "name": "CSS",
+      "icon": "assets/icons/css3-alt-brands.svg",
+      "alt": "CSS 3 logo"
+    }
+  ],
+  "projects": [
+    {
+      "id": "simple-task-board",
+      "title": "Simple Task Board Manager",
+      "description": "Aplicação desktop JavaFX simples e eficiente para gerenciamento de tarefas.",
+      "image": "assets/images/projects/01-boarddetarefas.jpg",
+      "alt": "Capa Simple Task Board Manager",
+      "technologies": [
+        "JAVA"
+      ],
+      "repository": "https://github.com/lgjor/simple-task-board-manager?tab=readme-ov-file#simple-task-board-manager",
+      "preview": "",
+      "features": [],
+      "hasModal": false,
+      "isReverse": false,
+      "type": "simple"
+    },
+    {
+      "id": "academia-digital",
+      "title": "Academia digital",
+      "description": "Back end java spring boot para gerência de academia desenvolvido a partir da Formação Java Developer da DIO.",
+      "type": "carousel",
+      "carouselId": "academia-digital",
+      "images": [
+        {
+          "src": "assets/images/projects/02-academia-digital/preview001.png",
+          "alt": "Academia Digital - Preview 1"
+        },
+        {
+          "src": "assets/images/projects/02-academia-digital/preview002.png",
+          "alt": "Academia Digital - Preview 2"
+        },
+        {
+          "src": "assets/images/projects/02-academia-digital/preview003.png",
+          "alt": "Academia Digital - Preview 3"
+        },
+        {
+          "src": "assets/images/projects/02-academia-digital/preview004.png",
+          "alt": "Academia Digital - Preview 4"
+        },
+        {
+          "src": "assets/images/projects/02-academia-digital/preview005.png",
+          "alt": "Academia Digital - Preview 5"
+        },
+        {
+          "src": "assets/images/projects/02-academia-digital/preview006.png",
+          "alt": "Academia Digital - Preview 6"
+        },
+        {
+          "src": "assets/images/projects/02-academia-digital/preview007.png",
+          "alt": "Academia Digital - Preview 7"
+        }
+      ],
+      "technologies": [
+        "Java",
+        "JavaScript",
+        "React"
+      ],
+      "repository": "https://github.com/lgjor/academia-digital",
+      "features": [
+        "✅ Controle de Alunos, Avaliações Físicas e Matrículas;",
+        "✅ Segurança com Autenticação e Autorização baseada em Roles (JWT);",
+        "✅ Gestão de Planos da academia;",
+        "✅ Controle de Mensalidades com status e datas de pagamento;",
+        "✅ Manutenção de histórico de matrículas por aluno;",
+        "✅ Frontend completo em React para interação com a API."
+      ],
+      "hasModal": true,
+      "isReverse": true
+    },
+    {
+      "id": "dev-links",
+      "title": "Dev Links",
+      "description": "O DevLinks é um agregador de links para usar como cartão de visitas online.",
+      "image": "assets/images/projects/04-dev-links/preview.jpg",
+      "alt": "Dev Links",
+      "technologies": [
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ],
+      "repository": "https://github.com/lgjor/devlinks",
+      "preview": "https://lgjor.github.io/devlinks/",
+      "features": [
+        "Tema escuro e tema claro",
+        "Responsividade",
+        "Animação nos botões e links",
+        "Avatar e barra de mídias sociais"
+      ],
+      "hasModal": false,
+      "isReverse": false,
+      "type": "simple"
+    },
+    {
+      "id": "snake-game",
+      "title": "Snake Game",
+      "description": "Um clone simples e clássico do jogo da cobrinha (Snake Game) desenvolvido utilizando apenas HTML, CSS e JavaScript.",
+      "image": "assets/images/projects/03-snake-game/preview.jpg",
+      "alt": "Snake Game",
+      "technologies": [
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ],
+      "repository": "https://github.com/lgjor/snake-game",
+      "preview": "https://lgjor.github.io/snake-game/",
+      "features": [
+        "Controle da cobra em 4 direções.",
+        "Sistema de pontuação.",
+        "Detecção de colisão (paredes e corpo).",
+        "Geração aleatória de comida.",
+        "Design simples e responsivo."
+      ],
+      "hasModal": false,
+      "isReverse": false,
+      "type": "simple"
+    },
+    {
+      "id": "tic-tac-toe",
+      "title": "Jogo da Velha (Tic-Tac-Toe) Inteligente",
+      "description": "Jogo da Velha desenvolvido em JavaScript, HTML e CSS. O jogo permite que um jogador humano enfrente uma Inteligência Artificial (IA) com diferentes níveis de dificuldade.",
+      "image": "assets/images/projects/05-tic-tac-toe/preview.jpg",
+      "alt": "Jogo da Velha (Tictactoe)",
+      "technologies": [
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ],
+      "repository": "https://github.com/lgjor/TicTacToe",
+      "preview": "https://lgjor.github.io/TicTacToe/",
+      "features": [
+        "Interface Gráfica: Tabuleiro interativo com design responsivo.",
+        "Seleção de Lado: O jogador pode escolher jogar com as peças brancas ou pretas.",
+        "Níveis de Dificuldade: Fácil, Normal e Difícil",
+        "Lógica de Jogo Robusta: Detecção automática de vitória, derrota e empate.",
+        "Sistema de Fim de Jogo: Exibição de uma mensagem modal informando o resultado da partida.",
+        "Opção de Reiniciar: Um botão \"Play Again\" permite reiniciar o jogo, voltando à tela de seleção de cor e dificuldade."
+      ],
+      "hasModal": false,
+      "isReverse": false,
+      "type": "simple"
+    },
+    {
+      "id": "dndinitiativecalculator",
+      "title": "Calculadora de iniciativa para Dungeons and Dragons",
+      "description": "Calculadora de iniciativa para os combates em jogos de RPG Dungeons and Dragons, 5ª Edição.",
+      "image": "assets/images/projects/06-dndinitiativecalculator/preview.jpg",
+      "alt": "Calculadora de iniciativa para Dungeons and Dragons",
+      "technologies": [
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ],
+      "repository": "https://github.com/lgjor/dndinitiativecalculator",
+      "preview": "https://lgjor.github.io/dndinitiativecalculator/",
+      "features": [
+        "Adicione combatentes (Herói's, NPC's ou Monstros) com nome, bônus de iniciativa e destreza.",
+        "Novo: Consulta de monstros utilizando a D&D 5e API",
+        "Ao adicionar um \"Monstro\", consulte pela API e preencha automaticamente destreza e bônus de iniciativa.",
+        "Marque combatentes como surpresos ou caídos.",
+        "Role iniciativa individualmente ou para todos os combatentes.",
+        "Exibe a ordem de iniciativa, colocando surpresos por último e caídos riscados.",
+        "Modifique o bônus de iniciativa a qualquer momento.",
+        "Interface temática inspirada em D&D.",
+        "Player de música de combate integrado."
+      ],
+      "hasModal": false,
+      "isReverse": false,
+      "type": "simple"
+    }
+  ],
+  "education": {
+    "degree": "Jornalista, Especialista em Comunicação Comunitária e Mestre em Comunicação",
+    "institution": "Universidade Estadual de Londrina",
+    "graduationDate": "Dez 2017",
+    "type": "Pós-graduação Lato e Stricto Sensu - Especialização e Mestrado"
+  },
+  "experience": {
+    "current": {
+      "title": "Freelance",
+      "period": "Out 2024 - Atualmente",
+      "description": "Elaboração de sites e temas Wordpress.",
+      "activities": [
+        "Elaboração de temas;",
+        "Produção de conteúdo;",
+        "Mídias sociais."
+      ]
+    }
+  },
+  "courses": [
+    {
+      "title": "Formação Java Fundamentals (35h)",
+      "institution": "Digital Innovation One",
+      "date": "Mai 2025",
+      "description": "Experiência prática com conteúdos essenciais como programação orientada a objetos, gerenciamento de exceções, uso de interfaces e expressões lambda, manipulação de arquivos com I/O, além do uso de ferramentas como Maven e Gradle para gerenciamento de dependências.\n\nColeções, desenvolvimento de projetos práticos com persistência em banco de dados, aplicação de princípios de design como SOLID e Clean Code."
+    },
+    {
+      "title": "Bootcamp Bradesco – Java Cloud Native (90h)",
+      "institution": "Digital Innovation One",
+      "date": "Mai 2025",
+      "description": "Princípios de Desenvolvimento De Aplicações (7 atividades)\nSintaxe Básica com Java (9 atividades)\nProgramação Orientada a Objetos (11 atividades)\nDesenvolvimento de APIs (6 atividades)\nIntegração com Banco de Dados (5 atividades)\nTrabalhando com Ambiente Cloud na Azure (11 atividades)\nServiços Cloud de Inteligência Artificial (10 atividades)"
+    },
+    {
+      "title": "Bootcamp Ri Happy - Front-end (75h)",
+      "institution": "Digital Innovation One",
+      "date": "Jun 2025",
+      "description": "Cursos e atividades práticas guiadas com a construção de 10 projetos Front-end com HTML, CSS e JAVASCRIPT:\n\n- Princípios de Desenvolvimento de Software Colaborativo - 6 atividades\n- Desenvolvendo suas Primeiras Páginas com HTML e CSS - 10 atividades\n- Aprendendo Lógica de Programação - 10 atividades\n- Dando os seus Primeiros Passos com JavaScript - 10 atividades\n- Construindo seu Primeiro Portfólio Front-end - 5 atividades"
+    },
+    {
+      "title": "Fundamentos de HTML e CSS (30h)",
+      "institution": "Rocketseat",
+      "date": "Fev 2025",
+      "description": "Fundamentos HTML e CSS, projetos práticos de landing pages e portfolio, técnicas de layout, formulários, CSS Functions, Responsividade, CSS Animations & Transitions."
+    }
+  ]
+}

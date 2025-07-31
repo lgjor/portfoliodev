@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste do Data Loader</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .test-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .status {
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 4px;
+        }
+        .success { background: #d4edda; color: #155724; border: 1px solid #c3e6cb; }
+        .error { background: #f8d7da; color: #721c24; border: 1px solid #f5c6cb; }
+        .info { background: #d1ecf1; color: #0c5460; border: 1px solid #bee5eb; }
+        button {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+        .data-display {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 4px;
+            margin: 10px 0;
+            font-family: monospace;
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+<body>
+    <div class="test-container">
+        <h1>🧪 Teste do Data Loader</h1>
+        
+        <div id="status"></div>
+        
+        <div>
+            <button onclick="testFetch()">Testar Fetch do JSON</button>
+            <button onclick="testDataLoader()">Testar Data Loader</button>
+            <button onclick="clearStatus()">Limpar Status</button>
+        </div>
+        
+        <div id="dataDisplay" class="data-display" style="display: none;"></div>
+    </div>
+
+    <script>
+        function addStatus(message, type = 'info') {
+            const statusDiv = document.getElementById('status');
+            const div = document.createElement('div');
+            div.className = `status ${type}`;
+            div.textContent = `[${new Date().toLocaleTimeString()}] ${message}`;
+            statusDiv.appendChild(div);
+        }
+
+        function clearStatus() {
+            document.getElementById('status').innerHTML = '';
+            document.getElementById('dataDisplay').style.display = 'none';
+        }
+
+        async function testFetch() {
+            addStatus('Iniciando teste de fetch...', 'info');
+            
+            try {
+                const response = await fetch('data/portfolio.json');
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+                }
+                
+                const data = await response.json();
+                addStatus('✅ JSON carregado com sucesso!', 'success');
+                
+                // Mostrar dados
+                const display = document.getElementById('dataDisplay');
+                display.textContent = JSON.stringify(data, null, 2);
+                display.style.display = 'block';
+                
+                addStatus(`📊 Dados carregados: ${data.personal?.name || 'N/A'}`, 'success');
+                
+            } catch (error) {
+                addStatus(`❌ Erro ao carregar JSON: ${error.message}`, 'error');
+                console.error('Erro detalhado:', error);
+            }
+        }
+
+        async function testDataLoader() {
+            addStatus('Iniciando teste do Data Loader...', 'info');
+            
+            try {
+                // Simular o data-loader.js
+                const response = await fetch('data/portfolio.json');
+                const portfolioData = await response.json();
+                
+                addStatus('✅ Data Loader funcionando!', 'success');
+                addStatus(`👤 Nome: ${portfolioData.personal?.name || 'N/A'}`, 'success');
+                addStatus(`💼 Título: ${portfolioData.personal?.title || 'N/A'}`, 'success');
+                addStatus(`🔧 Tecnologias: ${portfolioData.technologies?.length || 0} encontradas`, 'success');
+                addStatus(`📁 Projetos: ${portfolioData.projects?.length || 0} encontrados`, 'success');
+                
+            } catch (error) {
+                addStatus(`❌ Erro no Data Loader: ${error.message}`, 'error');
+                console.error('Erro detalhado:', error);
+            }
+        }
+
+        // Teste automático ao carregar a página
+        window.addEventListener('load', () => {
+            addStatus('🚀 Página carregada. Clique nos botões para testar.', 'info');
+        });
+    </script>
+</body>
+</html> 

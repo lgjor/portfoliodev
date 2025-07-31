@@ -422,6 +422,62 @@
     </div>
     
     <script src="assets/scripts/script.js"></script>
+    <script src="assets/scripts/data-loader.js"></script>
+    
+    <!-- Debug temporário -->
+    <script>
+    // Debug temporário para verificar se o sistema está funcionando
+    document.addEventListener('DOMContentLoaded', () => {
+        console.log('🔍 Debug: Verificando elementos...');
+        console.log('Hero span:', document.querySelector('.hero span'));
+        console.log('Hero h1:', document.querySelector('.hero h1'));
+        console.log('Technologies list:', document.querySelector('.technologies .technologies__list'));
+        console.log('Projects container:', document.querySelector('.projects__container'));
+        
+        // Testar fetch do JSON
+        fetch('data/portfolio.json')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+                }
+                return response.json();
+            })
+            .then(data => {
+                console.log('✅ JSON carregado com sucesso:', data.personal?.name);
+                console.log('📊 Projetos no JSON:', data.projects?.length);
+            })
+            .catch(error => {
+                console.error('❌ Erro ao carregar JSON:', error);
+            });
+    });
+    </script>
+    
+    <!-- Debug temporário -->
+    <script>
+    // Debug temporário para verificar se o sistema está funcionando
+    document.addEventListener('DOMContentLoaded', () => {
+        console.log('🔍 Debug: Verificando elementos...');
+        console.log('Hero span:', document.querySelector('.hero span'));
+        console.log('Hero h1:', document.querySelector('.hero h1'));
+        console.log('Technologies list:', document.querySelector('.technologies .technologies__list'));
+        console.log('Projects container:', document.querySelector('.projects__container'));
+        
+        // Testar fetch do JSON
+        fetch('data/portfolio.json')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+                }
+                return response.json();
+            })
+            .then(data => {
+                console.log('✅ JSON carregado com sucesso:', data.personal?.name);
+            })
+            .catch(error => {
+                console.error('❌ Erro ao carregar JSON:', error);
+            });
+    });
+    </script>
   </div>
 </body>
 </html>
