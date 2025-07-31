@@ -211,7 +211,7 @@ O portfolio é totalmente responsivo e funciona em:
 
 ## 📝 Licença
 
-Este projeto foi desenvolvido para fins educativos no Lab da [Digital Innovation One](https://www.dio.me/).
+O HTML inicial deste projeto foi desenvolvido para fins educativos no Lab da [Digital Innovation One](https://www.dio.me/).
 
 ## 👨‍💻 Autor
 
