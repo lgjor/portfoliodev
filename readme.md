@@ -2,7 +2,7 @@
 
 <p align="center">
   <a href="https://lgjor.github.io/portfoliodev/" target="_blank">
-    <img src=".github/preview.jpg" width="100%" alt="Portfolio Dev">
+    <img src=".github/preview.png" width="100%" alt="Portfolio Dev">
   </a>
 </p>
 
