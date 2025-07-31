@@ -77,26 +77,26 @@
             <span>Ver Projetos</span>
               <i class="bi bi-arrow-down-right"></i>
           </button>  
-        </a>
-      </div>
-    </main>
-    <section class="technologies">
-      <h2>Conhecimento nas principais tecnologias do mercado</h2>
-      <ul class="technologies__list">
-            <li class="technologies__item">
-              <img src="assets/icons/java-brands.svg" alt="Java logo">
-            </li>
-            <li class="technologies__item">
-                <img src="assets/icons/JavaScript.svg" alt="JavaScript logo">
-            </li>
-            <li class="technologies__item">
-              <img src="assets/icons/html5-brands.svg" alt="HTML 5 logo">
-            </li>
-            <li class="technologies__item">
-              <img src="assets/icons/css3-alt-brands.svg" alt="CSS 3 logo">
-            </li>
-      </ul>
-    </section>
+                 </a>
+       </div>
+       <section class="technologies">
+         <h2>Conhecimento nas principais tecnologias do mercado</h2>     
+         <ul class="technologies__list">
+               <li class="technologies__item">
+                 <img src="assets/icons/java-brands.svg" alt="Java logo">
+               </li>
+               <li class="technologies__item">
+                   <img src="assets/icons/JavaScript.svg" alt="JavaScript logo">
+               </li>
+               <li class="technologies__item">
+                 <img src="assets/icons/html5-brands.svg" alt="HTML 5 logo">
+               </li>
+               <li class="technologies__item">
+                 <img src="assets/icons/css3-alt-brands.svg" alt="CSS 3 logo">
+               </li>
+         </ul>
+       </section>
+     </main>
 
     <section id="projetos" class="projects">
 
@@ -105,14 +105,15 @@
         <div class="projects__container">
 
           <div class="projects__card">
-            <img class="card__cover" src="assets/images/projects/Thumbnail_Project-01.png" alt="Capa Travelgram">
+            <img class="card__cover" src="assets/images/projects/01-boarddetarefas.jpg" alt="Capa Simple Task Board Manager">
             <div class="card__body">
-              <h3 class="card__title">Travelgram</h3>
-              <p class="card__description">Ecommerce de Livros</p>
+              <h3 class="card__title">Simple Task Board Manager</h3>
+              <p class="card__description">Aplicação desktop simples e eficiente para gerenciamento de tarefas</p>
               <ul class="card__list">
-                <li class="card__item">Listagem de favoritos;</li>
-                <li class="card__item">Carrinho de compras;</li>
-                <li class="card__item">Filtragem por preço e categoria.</li>
+                <li class="card__item">📋 Boards Visuais: Organize suas tarefas em colunas visuais (A Fazer, Em Andamento, Concluído);</li>
+                <li class="card__item">🎴 Cards Interativos: Crie e edite cards com duplo clique (edição in-place);</li>
+                <li class="card__item">🔄 Drag & Drop: Mova tarefas entre colunas com arrastar e soltar;</li>
+                <li class="card__item">📊 Progresso Visual: Acompanhe o progresso com percentuais automáticos.</li>
               </ul>
               <ul class="technologies__list">
                 <li class="technologies__item">
@@ -123,13 +124,11 @@
                 </li>
               </ul>
               <div class="card__buttons">
-                <a href="https://lgjor.github.io/travelgram/" target="_blank">
-                <button class="btn btn--primary">
+                <button class="btn btn--primary" onclick="openModal('assets/images/projects/01-boarddetarefas.jpg')">
                   <span>Prévia</span>
                   <i class="bi bi-arrow-up-right"></i>
-                </button>  
-                </a>
-                <a href="https://github.com/lgjor/travelgram">
+                </button>
+                <a href="https://github.com/lgjor/simple-task-board-manager?tab=readme-ov-file#simple-task-board-manager">
                 <button class="btn">
                   <span>Repositório</span>
                 </button>  
@@ -138,39 +137,68 @@
           </div>
           </div>
 
-          <div class="projects__card card--reverse">
-            <img class="card__cover" src="assets/images/projects/Thumbnail_Project-02.png" alt="Capa Technews">
-            <div class="card__body">
-              <h3 class="card__title">Portal Technews</h3>
-              <p class="card__description">A história por trás dos Estilos Arquitetônicos.</p>
-              <ul class="card__list">
-                <li class="card__item">Postagens relacionadas e em destaque;</li>
-                <li class="card__item">Filtragem por tags e categorias;</li>
-                <li class="card__item">Biografia do autor.</li>
-              </ul>
-              <ul class="technologies__list">
-                <li class="technologies__item">
-                  <img src="assets/icons/html5-brands.svg" alt="HTML 5 logo">
-                </li>
-                <li class="technologies__item">
-                  <img src="assets/icons/css3-alt-brands.svg" alt="CSS 3 logo">
-                </li>
-              </ul>
-              <div class="card__buttons">
-                <a href="https://lgjor.github.io/portaldenoticias/" target="_blank">
-                  <button class="btn btn--primary">
-                    <span>Prévia</span>
-                    <i class="bi bi-arrow-up-right"></i>
-                  </button>
-                </a>
-                <a href="https://github.com/lgjor/portaldenoticias/" target="_blank">
-                  <button class="btn">
-                    <span>Repositório</span>
-                  </button>  
-                </a>
-              </div>
-            </div>
-          </div>
+                     <div class="projects__card card--reverse">
+                            <div class="card__cover carousel-container">
+                 <div class="carousel" data-carousel="academia-digital">
+                   <img class="carousel-image active" src="assets/images/projects/02-academia-digital/preview001.png" alt="Academia Digital - Preview 1" onclick="openModalFromCarousel(this.src)">
+                   <img class="carousel-image" src="assets/images/projects/02-academia-digital/preview002.png" alt="Academia Digital - Preview 2" onclick="openModalFromCarousel(this.src)">
+                   <img class="carousel-image" src="assets/images/projects/02-academia-digital/preview003.png" alt="Academia Digital - Preview 3" onclick="openModalFromCarousel(this.src)">
+                   <img class="carousel-image" src="assets/images/projects/02-academia-digital/preview004.png" alt="Academia Digital - Preview 4" onclick="openModalFromCarousel(this.src)">
+                   <img class="carousel-image" src="assets/images/projects/02-academia-digital/preview005.png" alt="Academia Digital - Preview 5" onclick="openModalFromCarousel(this.src)">
+                   <img class="carousel-image" src="assets/images/projects/02-academia-digital/preview006.png" alt="Academia Digital - Preview 6" onclick="openModalFromCarousel(this.src)">
+                   <img class="carousel-image" src="assets/images/projects/02-academia-digital/preview007.png" alt="Academia Digital - Preview 7" onclick="openModalFromCarousel(this.src)">
+                 <button class="carousel-btn carousel-btn--prev" onclick="changeSlide(-1, 'academia-digital')">
+                   <i class="bi bi-chevron-left"></i>
+                 </button>
+                 <button class="carousel-btn carousel-btn--next" onclick="changeSlide(1, 'academia-digital')">
+                   <i class="bi bi-chevron-right"></i>
+                 </button>
+                 <div class="carousel-dots">
+                   <span class="dot active" onclick="currentSlide(1, 'academia-digital')"></span>
+                   <span class="dot" onclick="currentSlide(2, 'academia-digital')"></span>
+                   <span class="dot" onclick="currentSlide(3, 'academia-digital')"></span>
+                   <span class="dot" onclick="currentSlide(4, 'academia-digital')"></span>
+                   <span class="dot" onclick="currentSlide(5, 'academia-digital')"></span>
+                   <span class="dot" onclick="currentSlide(6, 'academia-digital')"></span>
+                   <span class="dot" onclick="currentSlide(7, 'academia-digital')"></span>
+                 </div>
+               </div>
+             </div>
+             <div class="card__body">
+               <h3 class="card__title">Academia digital</h3>
+               <p class="card__description">Back end java spring boot para gerência de academia desenvolvido a partir da Formação Java Developer da DIO.</p>
+               <ul class="card__list">
+                 <li class="card__item">✅ Controle de Alunos, Avaliações Físicas e Matrículas;</li>
+                 <li class="card__item">✅ Segurança com Autenticação e Autorização baseada em Roles (JWT);</li>
+                 <li class="card__item">✅ Gestão de Planos da academia;</li>
+                 <li class="card__item">✅ Controle de Mensalidades com status e datas de pagamento;</li>
+                 <li class="card__item">✅ Manutenção de histórico de matrículas por aluno;</li>
+                 <li class="card__item">✅ Frontend completo em React para interação com a API.</li>
+               </ul>
+               <ul class="technologies__list">
+                 <li class="technologies__item">
+                   <img src="assets/icons/java-brands.svg" alt="Java logo">
+                 </li>
+                 <li class="technologies__item">
+                   <img src="assets/icons/JavaScript.svg" alt="JavaScript logo">
+                 </li>
+                 <li class="technologies__item">
+                   <img src="assets/icons/React.svg" alt="React logo">
+                 </li>
+               </ul>
+                                <div class="card__buttons">
+                   <button class="btn btn--primary" onclick="openModalFromCarouselCurrent()">
+                     <span>Prévia</span>
+                     <i class="bi bi-arrow-up-right"></i>
+                   </button>
+                 <a href="https://github.com/lgjor/academia-digital" target="_blank">
+                   <button class="btn">
+                     <span>Repositório</span>
+                   </button>  
+                 </a>
+               </div>
+             </div>
+           </div>
      
           <div class="projects__card">
             <img class="card__cover" src="assets/images/projects/Thumbnail_Project-03.png" alt="Capa Games Store">
@@ -384,6 +412,15 @@
         © 2023. Portfólio desenvolvido para fins educativos no Lab da <a href="https://www.dio.me/" target="_blank">Digital Innovation One</a> por <a href="https://github.com/lgjor" target="_blank">Lucas de Godoy Chicarelli</a>.
       </p>
     </footer>
+    
+    <!-- Modal para prévia das imagens -->
+    <div id="imageModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <img id="modalImage" src="" alt="Prévia do projeto">
+      </div>
+    </div>
+    
     <script src="assets/scripts/script.js"></script>
   </div>
 </body>

@@ -4,7 +4,8 @@
   flex-direction: column;
   gap: 2rem;
   align-items: center;
-  padding: 5rem 5rem 4rem; 
+  padding: 6rem 5rem 4rem; 
+  margin-top: 2rem;
 }
 
 .projects h2 {
@@ -23,6 +24,15 @@
     justify-content: space-between;
   }
 
+.projects__card.card--reverse .card__cover {
+    width: 40%;
+    flex-shrink: 0;
+  }
+
+.projects__card.card--reverse .card__body {
+    width: 60%;
+  }
+
 .projects__card {
   width: 100%;
   display: flex;
@@ -36,10 +46,12 @@
   border-radius: 0.5rem;
   object-fit: cover;
   object-position: center;
+  width: 40%;
+  flex-shrink: 0;
 }
 
 .card__body {
-  width: 100%;
+  width: 60%;
   display: flex; /* Allow the body to take up remaining space */
   flex-direction: column;
   padding: 1rem; /* Add some spacing */
@@ -84,6 +96,181 @@
   height: 4rem;
 }
 
-.card__body .technologies__logo {
+.card__body .technologies__item img {
+  width: 2rem;
   height: 2rem;
+  object-fit: contain;
+}
+
+/* Carrossel de imagens */
+.carousel-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  min-height: 300px;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  display: block;
+  cursor: pointer;
+}
+
+.carousel-image:hover {
+  transform: scale(1.02);
+  transition: transform 0.3s ease;
+}
+
+.carousel-image.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: background-color 0.3s ease;
+}
+
+.carousel-btn:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.carousel-btn--prev {
+  left: 10px;
+}
+
+.carousel-btn--next {
+  right: 10px;
+}
+
+.carousel-dots {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  z-index: 10;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dot.active {
+  background: white;
+}
+
+.dot:hover {
+  background: rgba(255, 255, 255, 0.8);
+}
+
+/* Modal para prévia das imagens */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(5px);
+}
+
+.modal-content {
+  position: relative;
+  margin: auto;
+  padding: 0;
+  width: 90%;
+  max-width: 800px;
+  max-height: 90vh;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.modal-content img {
+  width: 100%;
+  height: auto;
+  max-height: 90vh;
+  object-fit: contain;
+  display: block;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 1001;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+.close:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+/* Animação de entrada do modal */
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-50%) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(-50%) scale(1);
+  }
+}
+
+.modal-content {
+  animation: modalFadeIn 0.3s ease-out;
 }

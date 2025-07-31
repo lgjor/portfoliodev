@@ -1,21 +1,14 @@
 section.technologies {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   margin-top: 0rem;
   align-items: center;
   gap: 1.25rem;
-  padding: 6.25rem 1rem 2rem;
-  background: rgba(233, 233, 233,0.1);
-}
-
-section.technologies h2 {
-    align-items: flex-start;
-    text-align: left;
-    font-family: var(--ff-secondary);
-    font-weight: var(--fw-base);
-    font-size: var(--fs-xl);
-    max-width: 700px;
+  padding: 2rem 1rem 4rem;
+  background: rgba(233, 233, 233, 0.1);
+  min-height: 30vh;
+  margin: 2rem 0;
 }
 
 section.technologies span {
