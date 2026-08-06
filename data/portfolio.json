@@ -3,14 +3,14 @@
     "name": "Lucas de Godoy Chicarelli",
     "title": "Desenvolvedor Júnior",
     "subtitle": "focado em resultados de qualidade",
-    "location": "Santo Amaro da Imperatriz-SC",
+    "location": "São José - SC",
     "description": "Olá, sou mestre em comunicação e apaixonado por tecnologia. Atualmente estou estudando java, C e Javascript com foco em desenvolvimento BackEnd. Tenho experiência com o desenvolvimento de websites e temas Wordpress.",
     "languages": {
       "english": "Avançado",
       "spanish": "Básico"
     },
     "social": {
-      "github": "https://github.com/lgjor",
+      "github": "https://github.com/lucasgch",
       "linkedin": "https://www.linkedin.com/in/lucasgch/",
       "instagram": ""
     },
@@ -48,7 +48,7 @@
       "technologies": [
         "JAVA"
       ],
-      "repository": "https://github.com/lgjor/simple-task-board-manager",
+      "repository": "https://github.com/lucasgch/simple-task-board-manager",
       "preview": "",
       "features": [
         "⚡ Economia de Tempo: Menos tempo configurando, mais tempo produzindo",
@@ -104,7 +104,7 @@
         "JavaScript",
         "React"
       ],
-      "repository": "https://github.com/lgjor/academia-digital",
+      "repository": "https://github.com/lucasgch/academia-digital",
       "features": [
         "✅ Controle de Alunos, Avaliações Físicas e Matrículas;",
         "✅ Segurança com Autenticação e Autorização baseada em Roles (JWT);",
@@ -127,8 +127,8 @@
         "CSS",
         "JavaScript"
       ],
-      "repository": "https://github.com/lgjor/devlinks",
-      "preview": "https://lgjor.github.io/devlinks/",
+      "repository": "https://github.com/lucasgch/devlinks",
+      "preview": "https://lucasgch.github.io/devlinks/",
       "features": [
         "Tema escuro e tema claro",
         "Responsividade",
@@ -150,8 +150,8 @@
         "CSS",
         "JavaScript"
       ],
-      "repository": "https://github.com/lgjor/snake-game",
-      "preview": "https://lgjor.github.io/snake-game/",
+      "repository": "https://github.com/lucasgch/snake-game",
+      "preview": "https://lucasgch.github.io/snake-game/",
       "features": [
         "Controle da cobra em 4 direções.",
         "Sistema de pontuação.",
@@ -174,8 +174,8 @@
         "CSS",
         "JavaScript"
       ],
-      "repository": "https://github.com/lgjor/TicTacToe",
-      "preview": "https://lgjor.github.io/TicTacToe/",
+      "repository": "https://github.com/lucasgch/TicTacToe",
+      "preview": "https://lucasgch.github.io/TicTacToe/",
       "features": [
         "Interface Gráfica: Tabuleiro interativo com design responsivo.",
         "Seleção de Lado: O jogador pode escolher jogar com as peças brancas ou pretas.",
@@ -199,8 +199,8 @@
         "CSS",
         "JavaScript"
       ],
-      "repository": "https://github.com/lgjor/dndinitiativecalculator",
-      "preview": "https://lgjor.github.io/dndinitiativecalculator/",
+      "repository": "https://github.com/lucasgch/dndinitiativecalculator",
+      "preview": "https://lucasgch.github.io/dndinitiativecalculator/",
       "features": [
         "Adicione combatentes (Herói's, NPC's ou Monstros) com nome, bônus de iniciativa e destreza.",
         "Novo: Consulta de monstros utilizando a D&D 5e API",
@@ -227,8 +227,8 @@
         "CSS",
         "JavaScript"
       ],
-      "repository": "https://github.com/lgjor/portfoliodev",
-      "preview": "https://lgjor.github.io/portfoliodev/",
+      "repository": "https://github.com/lucasgch/portfoliodev",
+      "preview": "https://lucasgch.github.io/portfoliodev/",
       "features": [
         "✅ Front end responsivo e moderno",
         "✅ Tema claro/escuro",
