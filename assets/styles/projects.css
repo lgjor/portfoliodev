@@ -19,17 +19,18 @@
   gap: 4rem;
 }
 
-.projects__card.card--reverse {
+/* Intercala o layout: cards pares ficam com a imagem à direita */
+.projects__card:nth-child(even) {
     flex-direction: row-reverse;
     justify-content: space-between;
   }
 
-.projects__card.card--reverse .card__cover {
+.projects__card:nth-child(even) .card__cover {
     width: 40%;
     flex-shrink: 0;
   }
 
-.projects__card.card--reverse .card__body {
+.projects__card:nth-child(even) .card__body {
     width: 60%;
   }
 

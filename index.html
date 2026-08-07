@@ -53,7 +53,7 @@
     <main id="home">
       <div class="hero">
         <span>Lucas de Godoy Chicarelli</span>
-        <h1><b>Desenvolvedor Júnior</b> focado em resultados de qualidade</h1>
+        <h1><b>Desenvolvedor Full Stack</b><br>Busco desenvolver soluções eficientes, criativas e orientadas a resultados.</h1>
         <p>São José - SC</p>
         <ul class="menu menu--social">
           <li>
@@ -137,7 +137,7 @@
           </div>
           </div>
 
-                     <div class="projects__card card--reverse">
+                     <div class="projects__card">
                             <div class="card__cover carousel-container">
                  <div class="carousel" data-carousel="academia-digital">
                    <img class="carousel-image active" src="assets/images/projects/02-academia-digital/preview001.png" alt="Academia Digital - Preview 1" onclick="openModalFromCarousel(this.src)">
@@ -201,10 +201,10 @@
            </div>
      
           <div class="projects__card">
-            <img class="card__cover" src="assets/images/projects/Thumbnail_Project-03.png" alt="Capa Games Store">
+            <img class="card__cover" src="assets/images/projects/Thumbnail_Project-03.png" alt="Capa Página de receitas">
             <div class="card__body">
               <h3 class="card__title">Página de receitas</h3>
-              <p class="card__description">Loja online de Games.</p>
+              <p class="card__description">Site de receitas culinárias com favoritos, carrinho e filtragem.</p>
               <ul class="card__list">
                 <li class="card__item">Listagem de favoritos;</li>
                 <li class="card__item">Carrinho de compras;</li>
@@ -251,8 +251,8 @@
       <img class="about__photo" src="assets/images/avatar.jpg" alt="Foto de Lucas Godoy">
       <div class="about__description">
         <h2>Lucas de Godoy Chicarelli</h2>
-        <p>Olá, sou mestre em comunicação e apaixonado por tecnologia. Atualmente estou estudando java, C e Javascript com foco em desenvolvimento BackEnd. Tenho experiência com o desenvolvimento de websites e temas Wordpress.
-        </p>  
+        <p class="about__headline">Java | Spring Boot | JavaScript | Python | APIs REST | SQL</p>
+        <p class="about__bio">Estudante de Análise e Desenvolvimento de Sistemas no Instituto Federal de Santa Catarina - IFSC Campus São José. Mestre em comunicação e apaixonado por tecnologia. Atualmente estou estudando Java e automatização de testes. Tenho experiência com o desenvolvimento de websites e temas Wordpress.</p>
         <div class="about__icons">
           <i class="bi bi-translate"></i>
           <span>Inglês: Avançado | Espanhol: Básico</span>
@@ -424,63 +424,6 @@
     <script src="assets/scripts/env.js"></script>
     <script src="assets/scripts/script.js"></script>
     <script src="assets/scripts/data-loader.js"></script>
-    
-    <!-- Debug temporário -->
-    <script>
-    // Debug temporário para verificar se o sistema está funcionando
-    document.addEventListener('DOMContentLoaded', () => {
-        console.log('🔍 Debug: Verificando elementos...');
-        console.log('Hero span:', document.querySelector('.hero span'));
-        console.log('Hero h1:', document.querySelector('.hero h1'));
-        console.log('Technologies list:', document.querySelector('.technologies .technologies__list'));
-        console.log('Projects container:', document.querySelector('.projects__container'));
-        
-        // Testar fetch do JSON
-        window.getPortfolioJsonUrl()
-            .then(url => fetch(url))
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error(`HTTP ${response.status}: ${response.statusText}`);
-                }
-                return response.json();
-            })
-            .then(data => {
-                console.log('✅ JSON carregado com sucesso:', data.personal?.name);
-                console.log('📊 Projetos no JSON:', data.projects?.length);
-            })
-            .catch(error => {
-                console.error('❌ Erro ao carregar JSON:', error);
-            });
-    });
-    </script>
-    
-    <!-- Debug temporário -->
-    <script>
-    // Debug temporário para verificar se o sistema está funcionando
-    document.addEventListener('DOMContentLoaded', () => {
-        console.log('🔍 Debug: Verificando elementos...');
-        console.log('Hero span:', document.querySelector('.hero span'));
-        console.log('Hero h1:', document.querySelector('.hero h1'));
-        console.log('Technologies list:', document.querySelector('.technologies .technologies__list'));
-        console.log('Projects container:', document.querySelector('.projects__container'));
-        
-        // Testar fetch do JSON
-        window.getPortfolioJsonUrl()
-            .then(url => fetch(url))
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error(`HTTP ${response.status}: ${response.statusText}`);
-                }
-                return response.json();
-            })
-            .then(data => {
-                console.log('✅ JSON carregado com sucesso:', data.personal?.name);
-            })
-            .catch(error => {
-                console.error('❌ Erro ao carregar JSON:', error);
-            });
-    });
-    </script>
   </div>
 </body>
 </html>

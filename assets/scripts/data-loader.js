@@ -63,7 +63,7 @@ class PortfolioDataLoader {
         // Atualizar subtítulo
         const subtitleElement = document.querySelector('.hero h1');
         if (subtitleElement && personal.subtitle) {
-            const fullTitle = `<b>${personal.title}</b> ${personal.subtitle}`;
+            const fullTitle = `<b>${personal.title}</b><br>${personal.subtitle}`;
             subtitleElement.innerHTML = fullTitle;
             console.log('✅ Subtítulo atualizado:', personal.subtitle);
         } else {
@@ -150,7 +150,8 @@ class PortfolioDataLoader {
     }
 
     generateSimpleProjectHTML(project) {
-        const cardClass = project.isReverse ? 'projects__card card--reverse' : 'projects__card';
+        // A alternância esquerda/direita é feita pelo CSS (:nth-child), não por projeto
+        const cardClass = 'projects__card';
         
         // Verificar se o projeto tem modal ou preview
         let modalButton;
@@ -215,7 +216,7 @@ class PortfolioDataLoader {
         `).join('');
 
         return `
-            <div class="projects__card card--reverse">
+            <div class="projects__card">
                 <div class="card__cover carousel-container">
                     <div class="carousel" data-carousel="${project.carouselId}">
                         ${carouselImages}
@@ -280,9 +281,14 @@ class PortfolioDataLoader {
             aboutName.textContent = personal.name;
         }
 
-        const aboutDescription = document.querySelector('.about__description p');
-        if (aboutDescription) {
-            aboutDescription.textContent = personal.description;
+        const aboutHeadline = document.querySelector('.about__description .about__headline');
+        if (aboutHeadline) {
+            aboutHeadline.textContent = personal.headline;
+        }
+
+        const aboutBio = document.querySelector('.about__description .about__bio');
+        if (aboutBio) {
+            aboutBio.textContent = personal.description;
         }
 
         // Atualizar idiomas

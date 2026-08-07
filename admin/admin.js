@@ -48,6 +48,7 @@ class PortfolioAdmin {
                 title: "",
                 subtitle: "",
                 location: "",
+                headline: "",
                 description: "",
                 languages: {
                     english: "Básico",
@@ -157,6 +158,7 @@ class PortfolioAdmin {
         document.getElementById('title').value = personal.title || '';
         document.getElementById('subtitle').value = personal.subtitle || '';
         document.getElementById('location').value = personal.location || '';
+        document.getElementById('headline').value = personal.headline || '';
         document.getElementById('description').value = personal.description || '';
         document.getElementById('english').value = personal.languages?.english || 'Básico';
         document.getElementById('spanish').value = personal.languages?.spanish || 'Básico';
@@ -188,6 +190,7 @@ class PortfolioAdmin {
             title: formData.get('title'),
             subtitle: formData.get('subtitle'),
             location: formData.get('location'),
+            headline: formData.get('headline'),
             description: formData.get('description'),
             languages: {
                 english: formData.get('english'),

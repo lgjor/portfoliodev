@@ -1,10 +1,11 @@
 {
   "personal": {
     "name": "Lucas de Godoy Chicarelli",
-    "title": "Desenvolvedor Júnior",
-    "subtitle": "focado em resultados de qualidade",
+    "title": "Desenvolvedor Full Stack",
+    "subtitle": "Soluções eficientes, criativas e orientadas a resultados.",
     "location": "São José - SC",
-    "description": "Desenvolvedor Full Stack | Java | Spring Boot | JavaScript | Python | APIs REST | SQL. Estudante de Análise e Desenvolvimento de Sistemas no Instituto Federal de Santa Catarina - IFSC Campus São José. Mestre em comunicação e apaixonado por tecnologia. Atualmente estou estudando Java e automatização de testes. Tenho experiência com o desenvolvimento de websites e temas Wordpress.",
+    "headline": "Java | Spring Boot | JavaScript | Python | APIs REST | SQL",
+    "description": "Estudante de Análise e Desenvolvimento de Sistemas no Instituto Federal de Santa Catarina - IFSC Campus São José. Mestre em comunicação e apaixonado por tecnologia. Atualmente estou estudando Java e automatização de testes. Tenho experiência com o desenvolvimento de websites e temas Wordpress.",
     "languages": {
       "english": "Avançado",
       "spanish": "Básico"

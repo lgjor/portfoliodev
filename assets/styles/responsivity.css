@@ -17,7 +17,7 @@
   }
 
   p, span, li {
-    font-size: var(--fs-lg);
+    font-size: var(--fs-base);
     font-weight: var(--fw-base);
   }
 
@@ -68,14 +68,14 @@
 
   main#home .hero h1{
   font-size: var(--fs-x);
-  letter-spacing: 0.4rem;
+  letter-spacing: var(--ls-md);
   word-break:keep-all;
   margin-top: 1rem;
   margin-bottom: 1rem;
   }
 
   main#home .hero h1 b {
-  letter-spacing: 0.5rem;
+  letter-spacing: var(--ls-md);
   word-break:keep-all;
   }
 
@@ -200,7 +200,7 @@
     padding: 5rem 0rem 0rem; 
   }
 
-  .projects__card, .projects__card.card--reverse {
+  .projects__card, .projects__card:nth-child(even) {
     flex-direction: column;
     gap: 0;
     width: 100%;
@@ -209,12 +209,12 @@
   }
 
   .projects__card .card__cover,
-  .projects__card.card--reverse .card__cover {
+  .projects__card:nth-child(even) .card__cover {
     width: 100%;
   }
 
   .projects__card .card__body,
-  .projects__card.card--reverse .card__body {
+  .projects__card:nth-child(even) .card__body {
     width: 100%;
   }
 
@@ -240,10 +240,9 @@
   }
 
   .about__description p {
-    text-align: justify;
-    text-justify: inter-word;
+    text-align: left;
     word-break: keep-all;
-    line-height: 135%;    
+    line-height: 1.6;
   }
 
 }
@@ -448,7 +447,7 @@
     margin-bottom: 0px;
   }
 
-  .projects__card, .projects__card.card--reverse {
+  .projects__card, .projects__card:nth-child(even) {
     flex-direction: column;
     gap: 0;
     width: 100%;
@@ -459,12 +458,12 @@
   }
 
   .projects__card .card__cover,
-  .projects__card.card--reverse .card__cover {
+  .projects__card:nth-child(even) .card__cover {
     width: 100%;
   }
 
   .projects__card .card__body,
-  .projects__card.card--reverse .card__body {
+  .projects__card:nth-child(even) .card__body {
     width: 100%;
   }
 
@@ -508,10 +507,9 @@
   }
 
   .about__description p {
-    text-align: justify;
-    text-justify: inter-word;
+    text-align: left;
     word-break: keep-all;
-    line-height: 135%;    
+    line-height: 1.6;
   }
 
   #sobre > div.about__content1 > div > p {
