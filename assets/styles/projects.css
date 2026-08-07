@@ -118,13 +118,13 @@
 }
 
 .card__body .technologies__item {
-  width: 4rem;
-  height: 4rem;
+  width: 3rem;
+  height: 3rem;
 }
 
 .card__body .technologies__item img {
-  width: 2rem;
-  height: 2rem;
+  width: 1.5rem;
+  height: 1.5rem;
   object-fit: contain;
 }
 

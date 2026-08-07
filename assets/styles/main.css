@@ -67,7 +67,7 @@ main#home .technologies {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  padding: 2rem 1rem;
+  padding: 4rem 4rem;
   margin-top: 1rem;
   background: rgba(233, 233, 233, 0.1);
   border-radius: 0.5rem;
@@ -97,8 +97,8 @@ main#home .technologies .technologies__list {
 }
 
 main#home .technologies .technologies__item {
-  width: 4.5rem;
-  height: 4.5rem;
+  width: 3rem;
+  height: 3rem;
   padding: 0.75rem;
 }
 
