@@ -421,6 +421,7 @@
       </div>
     </div>
     
+    <script src="assets/scripts/env.js"></script>
     <script src="assets/scripts/script.js"></script>
     <script src="assets/scripts/data-loader.js"></script>
     
@@ -435,7 +436,8 @@
         console.log('Projects container:', document.querySelector('.projects__container'));
         
         // Testar fetch do JSON
-        fetch('data/portfolio.json')
+        window.getPortfolioJsonUrl()
+            .then(url => fetch(url))
             .then(response => {
                 if (!response.ok) {
                     throw new Error(`HTTP ${response.status}: ${response.statusText}`);
@@ -463,7 +465,8 @@
         console.log('Projects container:', document.querySelector('.projects__container'));
         
         // Testar fetch do JSON
-        fetch('data/portfolio.json')
+        window.getPortfolioJsonUrl()
+            .then(url => fetch(url))
             .then(response => {
                 if (!response.ok) {
                     throw new Error(`HTTP ${response.status}: ${response.statusText}`);

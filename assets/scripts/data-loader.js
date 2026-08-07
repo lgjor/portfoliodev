@@ -6,8 +6,9 @@ class PortfolioDataLoader {
 
     async loadData() {
         try {
-            console.log('🔄 Iniciando carregamento do portfolio.json...');
-            const response = await fetch('data/portfolio.json');
+            const jsonUrl = await window.getPortfolioJsonUrl();
+            console.log(`🔄 Iniciando carregamento de ${jsonUrl}...`);
+            const response = await fetch(jsonUrl);
             
             if (!response.ok) {
                 throw new Error(`HTTP ${response.status}: ${response.statusText}`);

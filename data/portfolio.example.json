@@ -1,0 +1,130 @@
+{
+  "personal": {
+    "name": "Maria Exemplo da Silva",
+    "title": "Desenvolvedora Web",
+    "subtitle": "apaixonada por criar soluções",
+    "location": "Sua Cidade - UF",
+    "description": "Olá! Este é um texto de exemplo para a sua descrição pessoal. Fale sobre sua trajetória, as tecnologias que estuda e suas experiências profissionais. Edite estes dados pelo painel admin (admin/admin.html) ou diretamente neste arquivo JSON.",
+    "languages": {
+      "english": "Intermediário",
+      "spanish": "Básico"
+    },
+    "social": {
+      "github": "https://github.com/seu-usuario",
+      "linkedin": "https://www.linkedin.com/in/seu-usuario/",
+      "instagram": "https://www.instagram.com/seu-usuario"
+    },
+    "resume": "https://exemplo.com/link-para-seu-curriculo"
+  },
+  "technologies": [
+    {
+      "name": "Java",
+      "icon": "assets/icons/java-brands.svg",
+      "alt": "Java logo"
+    },
+    {
+      "name": "JavaScript",
+      "icon": "assets/icons/JavaScript.svg",
+      "alt": "JavaScript logo"
+    },
+    {
+      "name": "HTML",
+      "icon": "assets/icons/html5-brands.svg",
+      "alt": "HTML 5 logo"
+    },
+    {
+      "name": "CSS",
+      "icon": "assets/icons/css3-alt-brands.svg",
+      "alt": "CSS 3 logo"
+    }
+  ],
+  "projects": [
+    {
+      "id": "projeto-exemplo-simples",
+      "title": "Projeto de Exemplo (simples)",
+      "description": "Exemplo de projeto com imagem única. Substitua pelo seu próprio projeto: título, descrição, imagem, tecnologias e links.",
+      "image": "assets/images/projects/01-boarddetarefas.jpg",
+      "alt": "Projeto de exemplo",
+      "technologies": [
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ],
+      "repository": "https://github.com/seu-usuario/seu-projeto",
+      "preview": "https://seu-usuario.github.io/seu-projeto/",
+      "features": [
+        "✅ Liste aqui as funcionalidades do seu projeto",
+        "✅ Uma por linha",
+        "✅ Emojis são bem-vindos"
+      ],
+      "hasModal": false,
+      "isReverse": false,
+      "type": "simple"
+    },
+    {
+      "id": "projeto-exemplo-carrossel",
+      "title": "Projeto de Exemplo (carrossel)",
+      "description": "Exemplo de projeto com carrossel de imagens. Marque a opção 'É Carrossel' no admin e liste uma imagem por linha.",
+      "type": "carousel",
+      "carouselId": "projeto-exemplo-carrossel",
+      "images": [
+        {
+          "src": "assets/images/projects/02-academia-digital/preview001.png",
+          "alt": "Projeto de Exemplo (carrossel) - Preview 1"
+        },
+        {
+          "src": "assets/images/projects/02-academia-digital/preview002.png",
+          "alt": "Projeto de Exemplo (carrossel) - Preview 2"
+        },
+        {
+          "src": "assets/images/projects/02-academia-digital/preview003.png",
+          "alt": "Projeto de Exemplo (carrossel) - Preview 3"
+        }
+      ],
+      "technologies": [
+        "Java",
+        "JavaScript"
+      ],
+      "repository": "https://github.com/seu-usuario/seu-projeto-carrossel",
+      "features": [
+        "✅ Carrossel com múltiplas imagens",
+        "✅ Modal de visualização ampliada",
+        "✅ Layout reverso (imagem à direita)"
+      ],
+      "hasModal": true,
+      "isReverse": true
+    }
+  ],
+  "education": {
+    "degree": "Seu curso ou graduação",
+    "institution": "Nome da instituição de ensino",
+    "graduationDate": "Dez 2025",
+    "type": "Graduação / Pós-graduação / Técnico"
+  },
+  "experience": {
+    "current": {
+      "title": "Seu cargo atual",
+      "period": "Jan 2025 - Atualmente",
+      "description": "Descreva brevemente sua atuação profissional atual.",
+      "activities": [
+        "Atividade realizada 1;",
+        "Atividade realizada 2;",
+        "Atividade realizada 3."
+      ]
+    }
+  },
+  "courses": [
+    {
+      "title": "Nome do Curso de Exemplo (40h)",
+      "institution": "Nome da Plataforma ou Instituição",
+      "date": "Mar 2025",
+      "description": "Descreva o conteúdo do curso: tecnologias abordadas, projetos práticos desenvolvidos e principais aprendizados."
+    },
+    {
+      "title": "Outro Curso de Exemplo (20h)",
+      "institution": "Nome da Plataforma ou Instituição",
+      "date": "Jun 2025",
+      "description": "Cada curso aparece como um item na seção de cursos e certificações do site."
+    }
+  ]
+}

@@ -46,3 +46,6 @@ $RECYCLE.BIN/
 
 # Claude Code
 .claude/
+
+# Configuração local (use .env.example como modelo)
+.env

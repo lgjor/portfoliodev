@@ -4,7 +4,8 @@
 async function initializeAdmin() {
     try {
         // Carregar dados do JSON
-        const response = await fetch('../data/portfolio.json');
+        const jsonUrl = await window.getPortfolioJsonUrl();
+        const response = await fetch(jsonUrl);
         const portfolioData = await response.json();
         
         // Salvar no localStorage

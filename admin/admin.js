@@ -1,6 +1,10 @@
 class PortfolioAdmin {
     constructor() {
-        this.portfolioData = this.loadPortfolioData();
+        this.portfolioData = null;
+    }
+
+    async init() {
+        this.portfolioData = await this.loadPortfolioData();
         this.initEventListeners();
         this.loadFormData();
         this.renderTechnologies();
@@ -8,19 +12,33 @@ class PortfolioAdmin {
         this.renderCourses();
     }
 
-    loadPortfolioData() {
+    async loadPortfolioData() {
+        // 1ª opção: o arquivo real, que é a fonte da verdade
+        try {
+            const jsonUrl = await window.getPortfolioJsonUrl();
+            const response = await fetch(jsonUrl + '?v=' + Date.now());
+            if (response.ok) {
+                const data = await response.json();
+                // Sincroniza o localStorage com a versão atual do arquivo
+                localStorage.setItem('portfolioData', JSON.stringify(data));
+                return data;
+            }
+        } catch (error) {
+            console.warn('Não foi possível carregar portfolio.json:', error);
+        }
+
+        // 2ª opção: cópia local (útil se o fetch falhar)
         try {
             const savedData = localStorage.getItem('portfolioData');
             if (savedData) {
                 return JSON.parse(savedData);
-            } else {
-                // Carregar dados padrão do JSON
-                return this.getDefaultStructure();
             }
         } catch (error) {
-            console.error('Erro ao carregar dados:', error);
-            return this.getDefaultStructure();
+            console.error('Erro ao ler localStorage:', error);
         }
+
+        // Última opção: estrutura vazia
+        return this.getDefaultStructure();
     }
 
     getDefaultStructure() {
@@ -624,6 +642,7 @@ class PortfolioAdmin {
 
 // Inicializar admin quando o DOM estiver pronto
 let portfolioAdmin;
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async () => {
     portfolioAdmin = new PortfolioAdmin();
+    await portfolioAdmin.init();
 });
