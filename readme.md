@@ -46,7 +46,8 @@ portfoliodev/
 ├── admin/
 │   ├── admin.html            # Interface de administração
 │   ├── admin.css             # Estilos do admin
-│   └── admin.js              # Lógica do admin
+│   ├── admin.js              # Lógica do admin
+│   └── init-admin.js         # Carrega o JSON no localStorage na 1ª vez
 ├── assets/
 │   ├── icons/               # Ícones das tecnologias
 │   ├── images/              # Imagens dos projetos
@@ -95,11 +96,13 @@ Abra o arquivo `index.html` em qualquer navegador web.
 #### Dados Pessoais
 
 - Nome completo
-- Título profissional
+- Título profissional e subtítulo
 - Localização
+- Headline (stack em destaque, estilo LinkedIn — aparece em negrito logo abaixo do nome na seção Sobre)
 - Descrição
 - Links das redes sociais
 - Níveis de idiomas
+- Link do currículo
 
 #### Tecnologias
 
