@@ -262,7 +262,9 @@ class PortfolioDataLoader {
             'JavaScript': 'assets/icons/JavaScript.svg',
             'HTML': 'assets/icons/html5-brands.svg',
             'CSS': 'assets/icons/css3-alt-brands.svg',
-            'React': 'assets/icons/React.svg'
+            'React': 'assets/icons/React.svg',
+            'PHP': 'assets/icons/php.svg',
+            'Wordpress': 'assets/icons/wordpress.svg'
         };
 
         return technologies.map(tech => `

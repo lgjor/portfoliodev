@@ -37,7 +37,7 @@ header .header__brand {
 /* switch */
 #switch{
   position: relative;
-  width: 64px;
+  width: 48px;
   margin: 15px auto;
   margin-left: auto;
   margin-right: 0; 
@@ -45,8 +45,8 @@ header .header__brand {
 }
 
 #switch button {
-  width: 32px;
-  height: 32px;
+  width: 22px;
+  height: 22px;
   background: var(--outline-variant) var(--switch-bg-url) no-repeat center;
   border: 0;
   border-radius: 50%;
@@ -72,14 +72,14 @@ html[data-theme='light'] #switch button.animated {
 }
 
 #switch button:hover {
-  outline: 8px solid var(--highlight-color);
+  outline: 5px solid var(--highlight-color);
 }
 
 #switch span {
   display: block;
   align-items: center;
-  width: 54px;
-  height: 24px;
+  width: 40px;
+  height: 18px;
   background: var(--surface-color);
   border: 1px solid var(--stroke-color);
   backdrop-filter: blur(4px);
@@ -98,13 +98,13 @@ html[data-theme='light'] #switch button.animated {
     left: 0%;
   }
   to {
-    left: 40%;
+    left: 45%;
   }
 }
 
 @keyframes slide-back {
   from {
-    left: 40%;
+    left: 45%;
   }
   to {
     left: 0%;
