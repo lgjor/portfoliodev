@@ -60,7 +60,7 @@
   --outline-variant: #BFC8CA;
 
 
-  --switch-bg-url: url('../icons/moon-stars.svg');
+  --switch-bg-url: url('/assets/icons/moon-stars.svg');
 }
 
 :root[data-theme='dark'] {
