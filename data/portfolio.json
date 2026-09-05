@@ -154,7 +154,7 @@
         "JavaScript"
       ],
       "repository": "https://github.com/lucasgch/devlinks",
-      "preview": "https://lucasgch.github.io/devlinks/",
+      "preview": "https://lucasgodoy.dev/devlinks/",
       "features": [
         "Tema escuro e tema claro",
         "Responsividade",
@@ -177,7 +177,7 @@
         "JavaScript"
       ],
       "repository": "https://github.com/lucasgch/snake-game",
-      "preview": "https://lucasgch.github.io/snake-game/",
+      "preview": "https://lucasgodoy.dev/snake-game/",
       "features": [
         "Controle da cobra em 4 direções.",
         "Sistema de pontuação.",
@@ -201,7 +201,7 @@
         "JavaScript"
       ],
       "repository": "https://github.com/lucasgch/TicTacToe",
-      "preview": "https://lucasgch.github.io/TicTacToe/",
+      "preview": "https://lucasgodoy.dev/TicTacToe/",
       "features": [
         "Interface Gráfica: Tabuleiro interativo com design responsivo.",
         "Seleção de Lado: O jogador pode escolher jogar com as peças brancas ou pretas.",
@@ -226,7 +226,7 @@
         "JavaScript"
       ],
       "repository": "https://github.com/lucasgch/dndinitiativecalculator",
-      "preview": "https://lucasgch.github.io/dndinitiativecalculator/",
+      "preview": "https://lucasgodoy.dev/dndinitiativecalculator/",
       "features": [
         "Adicione combatentes (Herói's, NPC's ou Monstros) com nome, bônus de iniciativa e destreza.",
         "Novo: Consulta de monstros utilizando a D&D 5e API",
@@ -254,7 +254,7 @@
         "JavaScript"
       ],
       "repository": "https://github.com/lucasgch/portfoliodev",
-      "preview": "https://lucasgch.github.io/portfoliodev/",
+      "preview": "https://lucasgodoy.dev/portfoliodev/",
       "features": [
         "✅ Front end responsivo e moderno",
         "✅ Tema claro/escuro",
