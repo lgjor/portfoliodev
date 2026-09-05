@@ -47,9 +47,11 @@ header .header__brand {
 #switch button {
   width: 22px;
   height: 22px;
-  background: var(--outline-variant) var(--switch-bg-url) no-repeat center;
   border: 0;
   border-radius: 50%;
+
+  background-color: var(--outline-variant);
+  background-image: var(--switch-bg-url);
 
   position: absolute;
   top: 50%; /* Center vertically */
