@@ -59,8 +59,8 @@
   --outline: #6F797A;
   --outline-variant: #BFC8CA;
 
-
-  --switch-bg-url: url('/assets/icons/moon-stars.svg');
+  /* Subindo da pasta /styles para /assets e acessando /icons/ */
+  --switch-bg-url: url('../icons/moon-stars.svg');
 }
 
 :root[data-theme='dark'] {
