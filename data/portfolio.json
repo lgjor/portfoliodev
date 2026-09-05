@@ -41,30 +41,6 @@
   ],
   "projects": [
     {
-      "id": "simple-task-board",
-      "title": "Simple Task Board Manager",
-      "description": "Aplicação desktop simples e eficiente para gerenciamento de tarefas.",
-      "image": "assets/images/projects/01-boarddetarefas.jpg",
-      "alt": "Simple Task Board Manager",
-      "technologies": [
-        "JAVA"
-      ],
-      "repository": "https://github.com/lucasgch/simple-task-board-manager",
-      "preview": "",
-      "features": [
-        "⚡ Economia de Tempo: Menos tempo configurando, mais tempo produzindo",
-        "🧠 Foco na Tarefa: Interface limpa que não distrai do objetivo principal",
-        "💾 Persistência Local: Seus dados ficam seguros no seu computador",
-        "📋 Boards Visuais: Organize suas tarefas em colunas visuais (A Fazer, Em Andamento, Concluído)",
-        "🎴 Cards Interativos: Crie e edite cards com duplo clique (edição in-place)",
-        "🔄 Drag & Drop: Mova tarefas entre colunas com arrastar e soltar",
-        "📊 Progresso Visual: Acompanhe o progresso com percentuais automáticos"
-      ],
-      "hasModal": false,
-      "isReverse": false,
-      "type": "simple"
-    },
-    {
       "id": "academia-digital",
       "title": "Academia digital",
       "description": "Back end java spring boot para gerência de academia desenvolvido a partir da Formação Java Developer da DIO.",
