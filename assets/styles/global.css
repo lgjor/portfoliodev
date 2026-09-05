@@ -80,7 +80,7 @@
   --border-color: #82B1C3;
   
 
-  --switch-bg-url: url(/assets/icons/moon-stars.svg);
+  --switch-bg-url: url('/portfolio/assets/icons/moon-stars.svg');
 
   #switch button {
    left: 0%; /* Dark Mode position */
@@ -102,7 +102,7 @@
 	--icon-color: #56575A;
   --border-color: #82B1C3;
 
-  --switch-bg-url: url('../icons/sun.svg');
+  --switch-bg-url: url('/portfolio/assets/icons/sun.svg');
 
   #switch button {
     left: 40%; /* Light Mode position */
