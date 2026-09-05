@@ -207,6 +207,22 @@ class PortfolioAdmin {
         this.savePortfolioData();
     }
 
+    getProjectImagePath(file, fallback = '') {
+        if (!(file instanceof File) || !file.name) {
+            return fallback;
+        }
+
+        const relativePath = (file.webkitRelativePath || '').replace(/\\/g, '/');
+        const projectsPath = 'assets/images/projects/';
+        const projectsPathIndex = relativePath.indexOf(projectsPath);
+
+        if (projectsPathIndex >= 0) {
+            return relativePath.slice(projectsPathIndex);
+        }
+
+        return `${projectsPath}${file.name}`;
+    }
+
     addTechnology() {
         const formData = new FormData(document.getElementById('technologyForm'));
         const techName = formData.get('techName');
@@ -257,12 +273,14 @@ class PortfolioAdmin {
 
     addProject() {
         const formData = new FormData(document.getElementById('projectForm'));
+        const imageInput = document.getElementById('projectImage');
+        const imageFile = formData.get('projectImage');
         
         const project = {
             id: formData.get('projectId'),
             title: formData.get('projectTitle'),
             description: formData.get('projectDescription'),
-            image: formData.get('projectImage'),
+            image: this.getProjectImagePath(imageFile, imageInput.dataset.currentImage || ''),
             alt: formData.get('projectAlt'),
             technologies: formData.get('projectTechnologies').split(',').map(t => t.trim()),
             repository: formData.get('projectRepository'),
@@ -299,6 +317,7 @@ class PortfolioAdmin {
         
         // Limpar formulário
         document.getElementById('projectForm').reset();
+        delete imageInput.dataset.currentImage;
         document.getElementById('carouselFields').style.display = 'none';
         
         console.log('✅ Projeto adicionado com sucesso');
@@ -501,7 +520,8 @@ class PortfolioAdmin {
         document.getElementById('projectId').value = project.id;
         document.getElementById('projectTitle').value = project.title;
         document.getElementById('projectDescription').value = project.description;
-        document.getElementById('projectImage').value = project.image;
+        document.getElementById('projectImage').value = '';
+        document.getElementById('projectImage').dataset.currentImage = project.image || '';
         document.getElementById('projectAlt').value = project.alt;
         document.getElementById('projectTechnologies').value = project.technologies.join(', ');
         document.getElementById('projectRepository').value = project.repository;

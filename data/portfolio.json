@@ -41,31 +41,6 @@
   ],
   "projects": [
     {
-      "id": "ecoh26",
-      "title": "Site Wordpress para ECOH - Encontro de Contadores de Histórias de Londrina",
-      "description": "Desenvolvimento de tema wordpress para projeto cultural ECOH focado em acessibilidade, criação de sistemas para agendamento e publicação de programações culturais, sistema de cadastro de colaboradores do projeto, criação de templates especializados para páginas internas.",
-      "image": "",
-      "alt": "Site Wordpress para o site do ECOH - Encontro de Contadores de Histórias de Londrina",
-      "technologies": [
-        "HTML",
-        "CSS",
-        "JavaScript",
-        "Wordpress",
-        "PHP"
-      ],
-      "repository": "",
-      "preview": "https://ecoh.art.br/",
-      "features": [
-        "Sistema de Cadastro para Programações Culturais com agendamento.",
-        "Sistema de Cadastro de Colaboradores.",
-        "Templates especializados para páginas internas.",
-        "Foco em acessibilidade."
-      ],
-      "hasModal": false,
-      "isReverse": false,
-      "type": "simple"
-    },
-    {
       "id": "simple-task-board",
       "title": "Simple Task Board Manager",
       "description": "Aplicação desktop simples e eficiente para gerenciamento de tarefas.",
